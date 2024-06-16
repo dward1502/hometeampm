@@ -1,9 +1,11 @@
-import React from 'react'
+import Hero from "@/components/Hero";
 
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+	return (
+		<>
+			<Hero title={"Residential Services"} />
+		</>
+	);
+};
 
-export default page
+export default page;

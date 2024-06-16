@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.hero}>
-				<Typography variant="h2" textAlign={"center"}>
+				<Typography variant="h2" textAlign={"center"} color={"#FFF"}>
 					Rental Property Management Company in San Diego
 				</Typography>
 			</div>
