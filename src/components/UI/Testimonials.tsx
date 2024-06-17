@@ -16,8 +16,10 @@ const Testimonials = () => {
 					</Typography>
 				</Link>
 			</Box>
-			<Box display={"flex"}>
-        
+			<Box display={"flex"} padding={5}>
+        <Box flex={1} sx={{backgroundColor:"#FFF", boxShadow:"0px 2px 26px 3px rgba(102,102,102,1)"}} display={"flex"} flexDirection:{"column"}>
+
+				</Box>
       </Box>
 			<Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
 				<CustomButton sx={{ width: 275, marginTop: 10 }}>SHARE YOUR EXPERIENCE</CustomButton>

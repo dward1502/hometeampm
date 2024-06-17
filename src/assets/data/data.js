@@ -61,7 +61,7 @@ export const menuItems = [
 				text: "Get a free rental valuation of your investment property",
 				path: "management-services/free-rental-analysis",
 			},
-			{ item: "Get a Quote", text: "Learn how much it would cost to manage your property", path: "management-services/quote" },
+			{ item: "Get a Quote", text: "Learn how much it would cost to manage your property", path: "management-services/getting-started" },
 		],
 	},
 	{
@@ -97,7 +97,7 @@ export const menuItems = [
 				text: "Sign-in to monitor your account",
 				path: "https://hometeam.appfolio.com/oportal/users/log_in",
 			},
-			{ item: "Get a quote", text: "Learn how much it would cost to manage your property", path: "owners/testimonials" },
+			{ item: "Get a quote", text: "Learn how much it would cost to manage your property", path: "management-services/getting-started" },
 		],
 	},
 	{

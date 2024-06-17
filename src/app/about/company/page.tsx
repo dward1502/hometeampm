@@ -9,6 +9,7 @@ import CustomCardComponent from "@/components/UI/CustomCard";
 
 import Carmen from "../../../assets/img/CarmenJimenez.jpg";
 import Shun from "../../../assets/img/ShunWakita.jpg";
+import Testimonials from "@/components/UI/Testimonials";
 
 const page = () => {
 	const router = useRouter();
@@ -23,7 +24,7 @@ const page = () => {
 				</Grid>
 				<Grid item md={6} xs={12}>
 					<Box display={"flex"} flexDirection={"column"} width={"80%"} sx={{ pl: { xs: 4 } }}>
-						<Typography variant="h3" color={"#053149"}>
+						<Typography variant="body2" color={"#053149"}>
 							About Us
 						</Typography>
 
@@ -65,17 +66,20 @@ const page = () => {
 					flexDirection={"column"}
 					justifyContent={"center"}
 				>
-					<Typography variant="h3" color={"#053149"} my={3}>
+					<Typography variant="body2" color={"#053149"} my={3}>
 						Our Values
 					</Typography>
-					<Typography variant="body1" mb={5}>
-						From our founder to every team member and action we take, these core values drive who we are and how we serve property owners in the San
-						Diego area.
-					</Typography>
+					<Box paddingX={10}>
+						<Typography variant="body1" mb={5} padding={3} textAlign={"center"}>
+							From our founder to every team member and action we take, these core values drive who we are and how we serve property owners in the San
+							Diego area.
+						</Typography>
+					</Box>
+
 					<Grid container spacing={3} justifyContent="center">
 						<Grid item>
-							<CustomCardComponent>
-								<Typography variant="h6" color={"#053149"} my={2}>
+							<CustomCardComponent height={425}>
+								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									CONTINUED GROWTH
 								</Typography>
 								<Typography variant="body1">
@@ -85,8 +89,8 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid item>
-							<CustomCardComponent>
-								<Typography variant="h6" color={"#053149"} my={2}>
+							<CustomCardComponent height={425}>
+								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									INTEGRITY WITHOUT COMPROMISE
 								</Typography>
 								<Typography variant="body1">
@@ -97,8 +101,8 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid item>
-							<CustomCardComponent>
-								<Typography variant="h6" color={"#053149"} my={2}>
+							<CustomCardComponent height={425}>
+								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									DELIVERING EXCELLENCE
 								</Typography>
 								<Typography variant="body1">
@@ -109,10 +113,11 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 					</Grid>
-
-					<CustomButton onClick={() => router.push("/management-services/quote")} sx={{ mt: 6 }}>
-						Get Started
-					</CustomButton>
+					<Box my={6}>
+						<CustomButton onClick={() => router.push("/management-services/quote")} sx={{ mt: 6 }}>
+							Get Started
+						</CustomButton>
+					</Box>
 				</Box>
 				<Box
 					sx={{ backgroundColor: "#FFF" }}
@@ -124,20 +129,23 @@ const page = () => {
 					flexDirection={"column"}
 					justifyContent={"center"}
 				>
-					<Typography variant="h3" color={"#053149"} my={3}>
+					<Typography variant="body2" color={"#053149"} my={3}>
 						OUR TEAM
 					</Typography>
-					<Typography variant="body1" mb={5}>
-						Our team members ensure that every client is a priority! Click below to get to know us a bit better. We're all looking forward to working
-						with you!
-					</Typography>
+					<Box paddingX={10}>
+						<Typography variant="body1" mb={5} textAlign={"center"}>
+							Our team members ensure that every client is a priority! Click below to get to know us a bit better. We're all looking forward to
+							working with you!
+						</Typography>
+					</Box>
+
 					<Grid container spacing={3} justifyContent="center">
 						<Grid item>
-							<CustomCardComponent>
+							<CustomCardComponent  height={375}>
 								<Box width={"100%"} height={200} position={"relative"}>
 									<Image src={Shun} alt="Image of Carmen" fill />
 								</Box>
-								<Typography variant="h6" color={"#053149"} my={2}>
+								<Typography variant="h5" color={"#053149"} my={2}>
 									SHUN WAKITA
 								</Typography>
 								<Typography variant="body1" color={"#FB8800"}>
@@ -146,25 +154,29 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid item>
-							<CustomCardComponent>
+							<CustomCardComponent height={375}>
 								<Box width={"100%"} height={200} position={"relative"}>
 									<Image src={Carmen} alt="Image of Carmen" fill />
 								</Box>
-								<Typography variant="h6" color={"#053149"} my={2}>
-									CARMEN T. JIMENEZ
-								</Typography>
-								<Typography variant="body1" color={"#FB8800"}>
-									Property Manager
-								</Typography>
+								<Box>
+									<Typography variant="h5" color={"#053149"} my={2}>
+										CARMEN T. JIMENEZ
+									</Typography>
+									<Typography variant="body1" color={"#FB8800"}>
+										Property Manager
+									</Typography>
+								</Box>
 							</CustomCardComponent>
 						</Grid>
 					</Grid>
-
-					<CustomButton onClick={() => router.push("/management-services/quote")} sx={{ mt: 6, width: 300 }}>
-						MEET THE REST OF THE TEAM
-					</CustomButton>
+					<Box my={6}>
+						<CustomButton onClick={() => router.push("/management-services/quote")} sx={{ mt: 6, width: 340 }}>
+							MEET THE REST OF THE TEAM
+						</CustomButton>
+					</Box>
 				</Box>
 			</Grid>
+			<Testimonials/>
 		</>
 	);
 };

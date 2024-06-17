@@ -10,7 +10,6 @@ body {
 	/* -ms-overflow-style: none; /* IE and Edge */
 	/* scrollbar-width: none; Firefox */
 	/* overflow-y: scroll; Ensures that the content is scrollable */ 
-	font-size: 16;
 	line-height: 1.5;
 	color: #161615;
 }

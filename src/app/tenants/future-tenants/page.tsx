@@ -32,7 +32,7 @@ const page = () => {
 						</Typography>
 					</Box>
 				</Box>
-				<Box sx={{ backgroundColor: "#F2F2F2" }}>
+				<Box sx={{ backgroundColor: "#F2F4F6" }}>
 					<Grid item xs={12} md={6}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
 							<Image src={Img1} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
