@@ -25,9 +25,7 @@ const page = () => {
 				</Grid>
 				<Grid item md={6} xs={12}>
 					<Box display={"flex"} flexDirection={"column"} width={"80%"} alignItems={"center"} sx={{ pl: { xs: 4 } }}>
-						<Typography variant="h4" color={"#053149"}>
-							BECOME A TRUSTED HOMETEAM VENDOR
-						</Typography>
+						<Typography variant="body2">BECOME A TRUSTED HOMETEAM VENDOR</Typography>
 						<Typography variant="body1" my={1.5}>
 							We are continually seeking out qualified, professional vendors to fulfill goods or maintenance contracts for our residential and
 							commercial properties. Maintenance includes landscaping, pool care, exterminating, painting, construction and more.
@@ -45,18 +43,20 @@ const page = () => {
 						</Typography>
 
 						<CustomButton sx={{ mt: 4 }} onClick={() => router.push("/vendors#application")}>
-							ABOUT US
+							SUBMIT AN APPLICATION
 						</CustomButton>
 					</Box>
 				</Grid>
 
 				<Grid container spacing={2} sx={{ backgroundColor: "#F2F4F6", padding: 8 }} mt={10}>
 					<Grid item xs={12} md={6}>
-					<Box display={"flex"}>
-							<Typography variant="h5" fontWeight={"bold"} color={"#053149"}>
+						<Box display={"flex"} sx={{ flexDirection: { xs: "column", md: "row" } }}>
+							<Typography variant="body2" fontWeight={"bold"} color={"#053149"}>
 								VENDOR APPLICATION
 							</Typography>
-							<Typography variant="h5" fontWeight={"bold"} color={"#FB8800" } ml={1}>REQUIREMENTS</Typography>
+							<Typography variant="body2" fontWeight={"bold"} color={"#FB8800"} ml={1}>
+								REQUIREMENTS
+							</Typography>
 						</Box>
 						<List>
 							{vendorpoints1.map((text, index) => (
@@ -70,11 +70,13 @@ const page = () => {
 						</List>
 					</Grid>
 					<Grid item xs={12} md={6}>
-						<Box display={"flex"}>
-							<Typography variant="h5" fontWeight={"bold"} color={"#053149"}>
+						<Box display={"flex"} sx={{ flexDirection: { xs: "column", md: "row" } }}>
+							<Typography variant="body2" fontWeight={"bold"} color={"#053149"}>
 								VENDOR APPLICATION
 							</Typography>
-							<Typography variant="h5" fontWeight={"bold"} color={"#FB8800" } ml={1}>EXPECTATIONS</Typography>
+							<Typography variant="body2" fontWeight={"bold"} color={"#FB8800"} ml={1}>
+								EXPECTATIONS
+							</Typography>
 						</Box>
 
 						<List>

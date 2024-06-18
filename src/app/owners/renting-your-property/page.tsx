@@ -18,7 +18,7 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography typography={"h4"} fontWeight={"bold"} color={"#053149"}>
+						<Typography typography={"body2"}>
 							PREPARING TO RENT YOUR PROPERTY
 						</Typography>
 						<Typography variant="body1">
@@ -33,7 +33,7 @@ const page = () => {
 			<Box width={"100%"} padding={8} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography typography={"h4"} fontWeight={"bold"} color={"#053149"}>
+						<Typography typography={"body2"}>
 							SETTING THE RENT
 						</Typography>
 						<Typography variant="body1">
@@ -58,7 +58,7 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography typography={"h4"} fontWeight={"bold"} color={"#053149"}>
+						<Typography typography={"body2"}>
 							HOW LONG WILL THE PROPERTY BE VACANT?
 						</Typography>
 						<Typography variant="body1">
@@ -76,7 +76,7 @@ const page = () => {
 			<Box width={"100%"} padding={8} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography typography={"h4"} fontWeight={"bold"} color={"#053149"}>
+						<Typography typography={"body2"}>
 							HOW DOES TENANT SCREENING BENEFIT ME?
 						</Typography>
 						<Typography variant="body1">

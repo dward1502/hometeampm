@@ -27,7 +27,7 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4">VENDOR SELECTION</Typography>
+						<Typography variant="body2">VENDOR SELECTION</Typography>
 						<Typography mt={2} variant="body1">
 							We set exceptionally high standards for every vendor we are associated with. Being in business for over 20 years, we have established
 							strong relationships with experienced vendors and contractors who provide quality, professional service at a discounted rate for us.
@@ -38,7 +38,7 @@ const page = () => {
 			<Box width={"100%"} padding={10} display={"flex"} sx={{ backgroundColor: "#F2F4F6" }}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" my={2}>
 							RESPONSIVENESS
 						</Typography>
 
@@ -57,7 +57,7 @@ const page = () => {
 			<Box width={"100%"} padding={10} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={10}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" my={2}>
 							TENANT ACCESS
 						</Typography>
 						<Typography mt={2} variant="body1">
@@ -70,7 +70,7 @@ const page = () => {
 						</CustomButton>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={10}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" my={2}>
 							EMERGENCY SERVICES
 						</Typography>
 						<Typography mt={2} variant="body1">

@@ -33,14 +33,14 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2"  my={2}>
 							LOCAL REALTORS
 						</Typography>
 						<Typography variant="body1">
 							All of our vacant properties are listed on the Multiple Listing Service, which allows local REALTORS access to our properties. This
 							enables all REALTORS to assist qualified tenants in locating our properties.
 						</Typography>
-						<Typography variant="h4" color={"#FB8800"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" color={"#FB8800"} my={2}>
 							REFERRALS
 						</Typography>
 						<Typography typography={"body1"}>
@@ -53,7 +53,7 @@ const page = () => {
 			<Box width={"100%"} padding={8} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2"  my={2}>
 							YOUTUBE
 						</Typography>
 						<Typography variant="body1">
@@ -63,7 +63,7 @@ const page = () => {
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2"  my={2}>
 							PROFESSIONAL PHOTOGRAPHY
 						</Typography>
 						<Typography variant="body1">
@@ -83,7 +83,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG1 />
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" mt={3} textAlign={"center"}>
+					<Typography variant="body2" mt={3} textAlign={"center"}>
 						Rental Hotsheet
 					</Typography>
 					<Typography variant="body1" mt={4}>
@@ -98,7 +98,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG2 />{" "}
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" textAlign={"center"} mt={3}>
+					<Typography variant="body2" textAlign={"center"} mt={3}>
 						Lockboxes
 					</Typography>
 					<Typography variant="body1" mt={4}>
@@ -114,7 +114,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG3 />
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" mt={3} textAlign={"center"}>
+					<Typography variant="body2" mt={3} textAlign={"center"}>
 						For Rent Signs
 					</Typography>
 					<Typography variant="body1" mt={4}>

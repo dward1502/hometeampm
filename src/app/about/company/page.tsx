@@ -6,10 +6,12 @@ import Img from "../../../assets/img/about-us.png";
 import { useRouter } from "next/navigation";
 import CustomButton from "@/components/UI/CustomButton";
 import CustomCardComponent from "@/components/UI/CustomCard";
+import GetQuote from "@/components/UI/GetQuote";
 
 import Carmen from "../../../assets/img/CarmenJimenez.jpg";
 import Shun from "../../../assets/img/ShunWakita.jpg";
 import Testimonials from "@/components/UI/Testimonials";
+import SVG from '../../../assets/circleStar.svg'
 
 const page = () => {
 	const router = useRouter();
@@ -76,9 +78,11 @@ const page = () => {
 						</Typography>
 					</Box>
 
-					<Grid container spacing={3} justifyContent="center">
-						<Grid item>
+					<Grid container spacing={3} justifyContent="center" paddingX={10}>
+						<Grid item xs={12} md={4}>
+							
 							<CustomCardComponent height={425}>
+								<SVG/>
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									CONTINUED GROWTH
 								</Typography>
@@ -88,8 +92,10 @@ const page = () => {
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
-						<Grid item>
+						<Grid item xs={12} md={4}>
+							
 							<CustomCardComponent height={425}>
+								<SVG/>
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									INTEGRITY WITHOUT COMPROMISE
 								</Typography>
@@ -100,8 +106,10 @@ const page = () => {
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
-						<Grid item>
+						<Grid item xs={12} md={4}>
+							
 							<CustomCardComponent height={425}>
+								<SVG/>
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									DELIVERING EXCELLENCE
 								</Typography>
@@ -140,8 +148,8 @@ const page = () => {
 					</Box>
 
 					<Grid container spacing={3} justifyContent="center">
-						<Grid item>
-							<CustomCardComponent  height={375}>
+						<Grid item xs={12} md={4}>
+							<CustomCardComponent height={375}>
 								<Box width={"100%"} height={200} position={"relative"}>
 									<Image src={Shun} alt="Image of Carmen" fill />
 								</Box>
@@ -153,7 +161,7 @@ const page = () => {
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
-						<Grid item>
+						<Grid item xs={12} md={4}>
 							<CustomCardComponent height={375}>
 								<Box width={"100%"} height={200} position={"relative"}>
 									<Image src={Carmen} alt="Image of Carmen" fill />
@@ -176,7 +184,8 @@ const page = () => {
 					</Box>
 				</Box>
 			</Grid>
-			<Testimonials/>
+			<Testimonials />
+			<GetQuote/>
 		</>
 	);
 };

@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import { Typography, Box, Grid } from "@mui/material";
+import { Typography, Box, Grid, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import Image from "next/image";
 import CheckCircle from "../../../assets/check-circle.svg";
 
@@ -22,44 +22,58 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" my={2}>
 							FINANCIAL REPORTING
 						</Typography>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Payment of all property related expenses including property debts, taxes, utilities and contractor invoices and bills.
-							</Typography>
-						</Box>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Management of rent collection and security deposits in compliance with State Trust Fund holding and record keeping requirements.{" "}
-							</Typography>
-						</Box>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">Rental market and economics of rent rate increases and local trends. </Typography>
-						</Box>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Complete electronic accounting and record keeping with monthly statements sent to the owner via mail or electronic copy.{" "}
-							</Typography>
-						</Box>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Year end 1099 Tax Reporting Statement that you can provide your accounting professional for your property.{" "}
-							</Typography>
-						</Box>
+						<List>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									{" "}
+									Payment of all property related expenses including property debts, taxes, utilities and contractor invoices and bills.
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									{" "}
+									Management of rent collection and security deposits in compliance with State Trust Fund holding and record keeping requirements.{" "}
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>Rental market and economics of rent rate increases and local trends.</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									Complete electronic accounting and record keeping with monthly statements sent to the owner via mail or electronic copy.
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									Year end 1099 Tax Reporting Statement that you can provide your accounting professional for your property.
+								</ListItemText>
+							</ListItem>
+						</List>
 					</Grid>
 				</Grid>
 			</Box>
 			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2" my={2}>
 							ACCOUNTING SERVICES
 						</Typography>
 						<Typography variant="body1" mt={2}>
@@ -74,7 +88,6 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			F
 		</>
 	);
 };

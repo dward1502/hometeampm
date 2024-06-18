@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import { Typography, Box, Grid } from "@mui/material";
+import { Typography, Box, Grid, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import Image from "next/image";
 import CheckCircle from "../../../assets/check-circle.svg";
 
@@ -21,18 +21,25 @@ const page = () => {
 							The best approach to maintenance is preventative maintenance, and this is HomeTeam Property Management policy.
 						</Typography>
 						<Typography variant="body1">First, we begin with educating tenants by:</Typography>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Each Adult applicant (18+ years of age) and / or applicant contributing to the monthly rent must complete a separate application.
-							</Typography>
-						</Box>
-						<Box display={"flex"}>
-							<CheckCircle />
-							<Typography variant="body1">
-								Each Adult applicant (18+ years of age) and / or applicant contributing to the monthly rent must complete a separate application.
-							</Typography>
-						</Box>
+						<List>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									Each Adult applicant (18+ years of age) and / or applicant contributing to the monthly rent must complete a separate application.
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<CheckCircle />
+								</ListItemIcon>
+								<ListItemText>
+									Each Adult applicant (18+ years of age) and / or applicant contributing to the monthly rent must complete a separate application.
+								</ListItemText>
+							</ListItem>
+						</List>
+
 						<Typography variant="body1">
 							It’s been said that no news is good news; however, this can be the opposite. Delayed news can become very bad news. What is worse than
 							finding out that dry rot or discoloration of the linoleum could have been prevented if the tenant had just reported the leaking toilet

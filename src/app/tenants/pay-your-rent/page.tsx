@@ -13,28 +13,26 @@ const page = () => {
 			<Hero title={"Pay Your Rent"} />
 			<Grid container spacing={2} padding={4} mt={10}>
 				<Grid item xs={12} md={6} padding={3} display={"flex"} flexDirection={"column"}>
-					<Typography variant="h4" color={"#053149"}>
-						PAYING RENT
-					</Typography>
+					<Typography variant="body2" my={2}>PAYING RENT</Typography>
 					<Typography variant="body1">Click on the Tenant Portal button to pay your rent online</Typography>
 					<List>
 						<ListItem>
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">Rent is due on the 1st of each month.</Typography>
+							<Typography>Rent is due on the 1st of each month.</Typography>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">Additional fees will be applied for late payments, as stated in your lease agreement.</Typography>
+							<Typography>Additional fees will be applied for late payments, as stated in your lease agreement.</Typography>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">
+							<Typography>
 								If you are utilizing electronic bill pay options from your financial institution or a similar electronic payment method, include your
 								rental street address and unit (if applicable) in the ‘memo’ section.
 							</Typography>
@@ -43,7 +41,7 @@ const page = () => {
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">
+							<Typography>
 								If you are paying by check, remember to include your rental street address and unit (if applicable) on the face of the check or memo
 								line.
 							</Typography>
@@ -52,19 +50,19 @@ const page = () => {
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">Please make your checks out to: HomeTeam Property Management</Typography>
+							<Typography>Please make your checks out to: HomeTeam Property Management</Typography>
 						</ListItem>
 						<ListItem>
 							<ListItemIcon>
 								<ArrRight />
 							</ListItemIcon>
-							<Typography variant="body1">821 Bowsprit Road, Chula Vista, CA 91914 Now you can pay by card! Check out the details here.</Typography>
+							<Typography>821 Bowsprit Road, Chula Vista, CA 91914 Now you can pay by card! Check out the details here.</Typography>
 						</ListItem>
 					</List>
 					<CustomButton onClick={() => router.push("https://hometeam.appfolio.com/oportal/users/log_in")}>TENANT PORTAL</CustomButton>
 				</Grid>
 				<Grid item xs={12} md={6} padding={3} display={"flex"} flexDirection={"column"}>
-					<Typography variant="h4" color={"#053149"} fontWeight={"bold"}>
+					<Typography variant="body2" my={2}>
 						LATE FEES
 					</Typography>
 					<Typography variant="body1">
@@ -74,7 +72,7 @@ const page = () => {
 						it takes for the check to be received by mail. If you feel that your check will not be received by the last day of your grace period,
 						please bring your check in person to our office before the end of the business day.
 					</Typography>
-					<Typography variant="h4" color={"#053149"} fontWeight={"bold"}>
+					<Typography variant="body2" my={2}>
 						PAYING RENT ON TIME HAS NEVER BEEN EASIER!
 					</Typography>
 					<Typography variant="body1">Set up recurring rent payments online so you never have to worry about paying rent on time again.</Typography>

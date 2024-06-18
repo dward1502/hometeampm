@@ -1,11 +1,21 @@
 .hero {
-  width: 100%;
-  height:35rem;
-  background-image: url("../assets/img/homepage-banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	height: 35rem;
+	background-image: url("../assets/img/homepage-banner.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.quote {
+	width: 100%;
+	/* height: 60rem; */
+	background-image: url("../assets/img/looking-for-a-role.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	margin-top: 5rem;
 }

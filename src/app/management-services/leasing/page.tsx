@@ -28,7 +28,7 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4">COMPREHENSIVE MARKETING PLAN</Typography>
+						<Typography variant="body2">COMPREHENSIVE MARKETING PLAN</Typography>
 						<Typography mt={2} variant="body1">
 							In collaboration with our leasing department, our marketing department consistently looks at methods and assists in the development of
 							new ways of marketing our rental units. Whether through video, print or social marketing, our company provides the maximum exposure of
@@ -43,7 +43,7 @@ const page = () => {
 			<Box width={"100%"} padding={10} display={"flex"} sx={{ backgroundColor: "#F2F4F6" }}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4" color={"#053149"} fontWeight={"bold"} my={2}>
+						<Typography variant="body2"  my={2}>
 							FULL-TIME LEASING DEPARTMENT
 						</Typography>
 
@@ -66,11 +66,11 @@ const page = () => {
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
-							<Image src={Image1} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
+							<Image src={Image3} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="h4">STRICT TENANT SCREENING</Typography>
+						<Typography variant="body2">STRICT TENANT SCREENING</Typography>
 						<Typography mt={2} variant="body1">
 							Our company has established a rigorous and thorough tenant screening process. This includes credit, employment and prior residency
 							verification. We also follow all federal and state guidelines and have established audit and compliance procedures when dealing with our

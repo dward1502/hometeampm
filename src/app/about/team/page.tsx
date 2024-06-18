@@ -2,24 +2,22 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Hero from "@/components/Hero";
-import { useRouter } from "next/navigation";
-import CustomButton from "@/components/UI/CustomButton";
 import CustomCardComponent from "@/components/UI/CustomCard";
-
 import Carmen from "../../../assets/img/CarmenJimenez.jpg";
 import Shun from "../../../assets/img/ShunWakita.jpg";
-import Carolina from '../../../assets/img/CarolinaGusman.jpg'
-import Jerome from '../../../assets/img/JeromeWatson.jpg'
-import Placeholder from '../../../assets/employee-placeholder.svg'
+import Carolina from "../../../assets/img/CarolinaGusman.jpg";
+import Jerome from "../../../assets/img/JeromeWatson.jpg";
+import Placeholder from "../../../assets/employee-placeholder.svg";
+import Testimonials from "@/components/UI/Testimonials";
 
 const page = () => {
-	const router = useRouter();
+	
 	return (
 		<>
 			<Hero title={"Our Team"} />
-			<Grid container mt={10} spacing={3} justifyContent={"center"}>
-				<Grid item>
-					<CustomCardComponent>
+			<Grid container mt={10} spacing={5} display={'flex'} justifyContent={"center"} alignContent={'center'} padding={3}>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
 							<Image src={Shun} alt="Image of Carmen" fill style={{ objectFit: "cover" }} />
 						</Box>
@@ -31,8 +29,8 @@ const page = () => {
 						</Typography>
 					</CustomCardComponent>
 				</Grid>
-				<Grid item>
-					<CustomCardComponent>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
 							<Image src={Carmen} alt="Image of Carmen" fill />
 						</Box>
@@ -44,8 +42,8 @@ const page = () => {
 						</Typography>
 					</CustomCardComponent>
 				</Grid>
-				<Grid item>
-					<CustomCardComponent>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
 							<Image src={Carolina} alt="Image of Carmen" fill style={{ objectFit: "cover" }} />
 						</Box>
@@ -57,8 +55,8 @@ const page = () => {
 						</Typography>
 					</CustomCardComponent>
 				</Grid>
-				<Grid item>
-					<CustomCardComponent>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
 							<Image src={Jerome} alt="Image of Carmen" fill style={{ objectFit: "cover" }} />
 						</Box>
@@ -70,10 +68,10 @@ const page = () => {
 						</Typography>
 					</CustomCardComponent>
 				</Grid>
-				<Grid item>
-					<CustomCardComponent>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
-							<Image src={Placeholder} alt="Image of Carmen" fill style={{ objectFit: "cover" }} />
+							<Placeholder/>
 						</Box>
 						<Typography variant="h6" color={"#053149"} my={2}>
 							MARY ILUSTRE
@@ -83,10 +81,10 @@ const page = () => {
 						</Typography>
 					</CustomCardComponent>
 				</Grid>
-				<Grid item>
-					<CustomCardComponent>
+				<Grid item xs={12} md={4}>
+					<CustomCardComponent height={375}>
 						<Box width={"100%"} height={250} position={"relative"}>
-							<Image src={Placeholder} alt="Image of Carmen" fill style={{ objectFit: "cover" }} />
+							<Placeholder/>
 						</Box>
 						<Typography variant="h6" color={"#053149"} my={2}>
 							MICHAEL JEROME DE GUZMAN
@@ -97,6 +95,7 @@ const page = () => {
 					</CustomCardComponent>
 				</Grid>
 			</Grid>
+			<Testimonials />
 		</>
 	);
 };

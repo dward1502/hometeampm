@@ -6,7 +6,7 @@ interface Props {
 const Hero = (prop: Props) => {
 	return (
 		<div className={styles.hero}>
-			<Typography color={"#FFF"} variant="h2" textAlign={'center'}>{prop.title}</Typography>
+			<Typography color={"#FFF"} variant="body2" textAlign={'center'} fontSize={'5rem'}>{prop.title}</Typography>
 		</div>
 	);
 };

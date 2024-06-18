@@ -36,9 +36,13 @@ const theme = createTheme({
 		},
 		body2: {
 			color: "#053149",
-			fontSize: '3rem',
+			fontSize: '2.2rem',
 			fontFamily: fjallo.style.fontFamily,
 		},
+		button:{
+			fontFamily:fjallo.style.fontFamily,
+			fontSize:'1.8rem'
+		}
 	},
 });
 

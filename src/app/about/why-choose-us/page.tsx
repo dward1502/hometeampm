@@ -14,7 +14,7 @@ const page = () => {
 	return (
 		<>
 			<Hero title={"Why Choose Us"} />
-			<Grid container mt={4} spacing={2}>
+			<Grid container mt={4} spacing={2} paddingX={3}>
 				<Grid item md={6} xs={12}>
 					<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
 						<Image src={Img} alt="About image" style={{ maxWidth: "100%", height: "auto" }} />
@@ -22,11 +22,11 @@ const page = () => {
 				</Grid>
 				<Grid item md={6} xs={12}>
 					<Box display={"flex"} flexDirection={"column"} width={"80%"} sx={{ pl: { xs: 4 } }}>
-						<Typography variant="h4" color={"#053149"}>
+						<Typography variant="body2" component={"h2"}>
 							WE MAKE EVERY CLIENT OUR TOP PRIORITY
 						</Typography>
 
-						<Typography color={"#FB8800"} fontWeight={400} variant="h6" fontStyle={"bold"}>
+						<Typography color={"#FB8800"} fontWeight={600} variant="body1" fontStyle={"bold"}>
 							Residential and Commercial property owners benefit from our top-rated services!
 						</Typography>
 						<Typography variant="body1" my={1.5}>
@@ -38,7 +38,7 @@ const page = () => {
 							We serve every client we have as our top priority. The combination of our experience, established processes, local knowledge, stellar
 							team, and core values make a positive difference when choosing the best property managers for your properties.{" "}
 						</Typography>
-						
+
 						<CustomButton onClick={() => router.push("/about/company")} sx={{ mt: 4 }}>
 							ABOUT US
 						</CustomButton>
@@ -54,10 +54,10 @@ const page = () => {
 					alignItems={"center"}
 					flexDirection={"column"}
 					justifyContent={"center"}
-				>					
-					<Grid container spacing={3} justifyContent="center">
-						<Grid item>
-							<CustomCardComponent>
+				>
+					<Grid container spacing={3} justifyContent="center" alignContent={'center'} padding={5}>
+						<Grid item xs={12} md={4}>
+							<CustomCardComponent height={375}>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									CONTINUED GROWTH
 								</Typography>
@@ -67,8 +67,8 @@ const page = () => {
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
-						<Grid item>
-							<CustomCardComponent>
+						<Grid  item xs={12} md={4}>
+							<CustomCardComponent height={375}>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									INTEGRITY WITHOUT COMPROMISE
 								</Typography>
@@ -79,8 +79,8 @@ const page = () => {
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
-						<Grid item>
-							<CustomCardComponent>
+						<Grid  item xs={12} md={4}>
+							<CustomCardComponent height={375}>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									DELIVERING EXCELLENCE
 								</Typography>
@@ -97,7 +97,7 @@ const page = () => {
 						Get Started
 					</CustomButton>
 				</Box>
-				<Testimonials/>				
+				<Testimonials />
 			</Grid>
 		</>
 	);

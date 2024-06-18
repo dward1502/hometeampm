@@ -1,18 +1,7 @@
-export const testimonials = [
-	{
-		text: "Home Team Property Management is a great company! They have great customer service and they always take care of any questions or concerns that I have. This company is professional and trustworthy.",
-		name: "Liz G.",
-		location: "Bonita, CA ",
-	},
-	{
-		text: "A wonderful team of professionals! They’ve always taken care of us and handle everything quickly and efficiently. I give their number to everyone I know, renters and property owners alike!",
-		name: "Tammy D.",
-		location: "Chula Vista, CA ",
-	},
-];
 export const menuItems = [
 	{
 		title: "About",
+		path:"/about",
 		items: [
 			{ item: "Our Company", text: "It's been over 20 years and our goal hasn't changed", path: "about/company" },
 			{ item: "Our Team", text: "Meet the Home Team Property Management Team", path: "about/team" },
@@ -37,6 +26,7 @@ export const menuItems = [
 	},
 	{
 		title: "Management Services",
+		path:"management-services",
 		items: [
 			{ item: "Residential", text: "It's been over 20 years and our goal hasn't changed", path: "management-services/residential" },
 			{ item: "Commerical", text: "View our commercial property management services", path: "management-services/commercial" },
@@ -65,7 +55,7 @@ export const menuItems = [
 		],
 	},
 	{
-		title: "Owners",
+		title: "Owners",path:"/owners",
 		items: [
 			{
 				item: "Marketing your property",
@@ -101,7 +91,7 @@ export const menuItems = [
 		],
 	},
 	{
-		title: "Tenants",
+		title: "Tenants",path:"/tenants",
 		items: [
 			{
 				item: "Rental Search",

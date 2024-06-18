@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="418" height="359" viewBox="0 0 418 359">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveRatio="meet"  viewBox="0 0 418 359">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_945" data-name="Rectangle 945" width="418" height="359" transform="translate(-6483 -12355)" fill="#efefef"/>
+      <rect id="Rectangle_945" data-name="Rectangle 945" width="100%" height="100%" transform="translate(-6483 -12355)" fill="#efefef"/>
     </clipPath>
   </defs>
   <g id="Mask_Group_109" data-name="Mask Group 109" transform="translate(6483 12355)" clip-path="url(#clip-path)">

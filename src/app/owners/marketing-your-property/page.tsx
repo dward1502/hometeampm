@@ -15,7 +15,7 @@ const page = () => {
 					in the market for a rental. Once your property is ready we leverage multiple online platforms and traditional marketing methods, which
 					convert leads into applicants, then applicants into tenants.
 				</Typography>
-				<Typography variant="h4" fontWeight={"bold"} color={"#053149"} textAlign={"center"}>
+				<Typography variant="body2" textAlign={"center"}>
 					WHAT DO WE USE?
 				</Typography>
 			</Box>
@@ -29,7 +29,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG1 />
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" mt={3} textAlign={"center"} >
+					<Typography variant="body2" mt={3} textAlign={"center"} fontSize={"1.8rem"}>
 						INTERNET
 					</Typography>
 					<Typography variant="body1" mt={4}>
@@ -46,7 +46,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG2 />{" "}
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" textAlign={"center"} mt={3}>
+					<Typography variant="body2" textAlign={"center"} mt={3} fontSize={"1.8rem"}>
 						PROFESSIONAL PHOTOGRAPHY
 					</Typography>
 					<Typography variant="body1" mt={4}>
@@ -63,7 +63,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG3 />{" "}
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" mt={3} textAlign={"center"} >
+					<Typography variant="body2" mt={3} textAlign={"center"} fontSize={"1.8rem"}>
 						SIGNAGE
 					</Typography>
 					<Typography variant="body1" mt={4}>
@@ -79,7 +79,7 @@ const page = () => {
 					flex={1}
 				>
 					<SVG4 />{" "}
-					<Typography fontWeight={"bold"} color={"#053149"} variant="h5" mt={3}>
+					<Typography variant="body2" mt={3} textAlign={"center"} fontSize={"1.8rem"}>
 						SHOWINGS &amp; APPLICATIONS
 					</Typography>
 					<Typography variant="body1" mt={4}>

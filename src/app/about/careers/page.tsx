@@ -25,15 +25,15 @@ const page = () => {
 				</Grid>
 				<Grid item md={6} xs={12}>
 					<Box display={"flex"} flexDirection={"column"} width={"80%"} sx={{ pl: { xs: 4 } }}>
-						<Box>
-							<Typography variant="h4" color={"#053149"}>
-								WANT TO LOVE WHERE{" "}
+						<Box display={"flex"}>
+							<Typography variant="body2" component={"h2"} fontSize={"2.2rem"}>
+								WANT TO LOVE WHERE
 							</Typography>
-							<Typography variant="h4" color={"#FB8800"}>
+							<Typography variant="body2" color={"secondary"} fontSize={"2.2rem"} ml={1}>
 								YOU WORK?
 							</Typography>
 						</Box>
-						<Typography color={"#FB8800"} fontWeight={400}>
+						<Typography color={"#FB8800"} fontWeight={600} variant="body1" fontStyle={"bold"}>
 							At HomeTeam Property Management, we believe in...
 						</Typography>
 						<List>
@@ -42,7 +42,9 @@ const page = () => {
 									<ListItemIcon>
 										<CheckCircleRounded style={{ color: "#FB8800" }} />
 									</ListItemIcon>
-									<ListItemText primary={text} />
+									<ListItemText>
+										<Typography variant="body1">{text}</Typography>
+									</ListItemText>
 								</ListItem>
 							))}
 						</List>
@@ -66,8 +68,17 @@ const page = () => {
 					</Box>
 				</Grid>
 				<Grid item xs={12}>
-					<Box sx={{ backgroundColor: "#F2F4F6" }} mt={8} width={"100vw"} height={200} padding={5} display={'flex'} alignItems={'center'} flexDirection={'column'} justifyContent={'center'}>
-						<Typography variant="h3" color={"#053149"} ml={-67}>
+					<Box
+						sx={{ backgroundColor: "#F2F4F6" }}
+						mt={8}
+						width={"100vw"}
+						height={250}
+						padding={10}
+						display={"flex"}						
+						flexDirection={"column"}
+						justifyContent={"center"}
+					>
+						<Typography variant="body2" >
 							OPEN POSITIONS
 						</Typography>
 						<Typography variant="body1">
