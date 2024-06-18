@@ -6,11 +6,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { menuItems } from "@/assets/data/data";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Logo from "../../assets/homeTeamLogo.svg";
+import NavDrawer from "./Drawer";
 import { useRouter } from "next/navigation";
 const NavBar = () => {
 	const router = useRouter();
 	const [anchorEls, setAnchorEls] = useState<{ [key: string]: HTMLElement | null }>({});
-
+	const [drawerOpen, setDrawerOpen] = useState(false);
 	const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
 		setAnchorEls({ ...anchorEls, [menu]: event.currentTarget });
 	};
@@ -18,7 +19,6 @@ const NavBar = () => {
 	const handleMenuClose = (menu: string) => {
 		setAnchorEls({ ...anchorEls, [menu]: null });
 	};
-	const [drawerOpen, setDrawerOpen] = useState(false);
 
 	const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
 		setAnchorEls({ ...anchorEls, [menu]: event.currentTarget });
@@ -28,8 +28,8 @@ const NavBar = () => {
 		setAnchorEls({ ...anchorEls, [menu]: null });
 	};
 
-	const toggleDrawer = (open: boolean) => () => {
-		setDrawerOpen(open);
+	const toggleDrawer = () => {
+		setDrawerOpen((prev) => !prev);
 	};
 	const handleNavigation = (path: string) => {
 		router.push(path);
@@ -64,7 +64,7 @@ const NavBar = () => {
 								transformOrigin={{ vertical: "top", horizontal: "left" }}
 								sx={{ mt: 1, minWidth: "20rem", padding: 2 }}
 							>
-								<Grid container wrap="wrap" width={'60vw'}>
+								<Grid container wrap="wrap" width={"60vw"}>
 									{menu.items.map(({ item, text, path }, i) => (
 										<Grid item xs={12} sm={6} md={4} key={i} onClick={() => handleNavigation(`/${path}`)}>
 											<MenuItem sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", width: "20rem" }}>
@@ -119,7 +119,7 @@ const NavBar = () => {
 						</MenuItem>
 					</Menu>
 				</Box>
-				<IconButton sx={{ display: { xs: "flex", md: "none" } }} onClick={toggleDrawer(true)} color="inherit">
+				<IconButton sx={{ display: { xs: "flex", md: "none" } }} onClick={toggleDrawer} color="inherit">
 					<MenuIcon sx={{ color: "#FFF", backgroundColor: "#053149", fontSize: 40, borderRadius: "5px" }} />
 				</IconButton>
 				{/* <Box display={"flex"} justifyContent={"flex-end"} alignItems={"center"}>
@@ -186,6 +186,7 @@ const NavBar = () => {
 					</Menu>
 				</Box> */}
 			</Toolbar>
+			<NavDrawer open={drawerOpen} toggleDrawer={toggleDrawer} />
 		</AppBar>
 	);
 };
