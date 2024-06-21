@@ -3,6 +3,8 @@ import { Typography, Box, Grid } from "@mui/material";
 import Image from "next/image";
 
 import Image1 from "../../../assets/img/understand-the-success.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
+import RentalAnalysis from "@/components/UI/RentalAnalysis";
 
 const page = () => {
 	return (
@@ -29,6 +31,8 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
+			<RentalAnalysis/>
+			<GetQuote/>
 		</>
 	);
 };

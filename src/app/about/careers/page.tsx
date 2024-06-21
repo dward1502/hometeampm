@@ -2,6 +2,7 @@ import { Box, Grid, Typography, List, ListItem, ListItemIcon, ListItemText } fro
 import { CheckCircleRounded } from "@mui/icons-material";
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import Career from "@/components/Forms/Career";
 
 import Img from "../../../assets/img/career-oportunities.jpg";
 
@@ -87,6 +88,7 @@ const page = () => {
 					</Box>
 				</Grid>
 			</Grid>
+			<Career/>
 		</>
 	);
 };

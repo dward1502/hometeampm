@@ -6,7 +6,7 @@ import Img from "../../../assets/img/about-us.png";
 import { useRouter } from "next/navigation";
 import CustomButton from "@/components/UI/CustomButton";
 import CustomCardComponent from "@/components/UI/CustomCard";
-import GetQuote from "@/components/UI/GetQuote";
+import GetQuote from "@/components/Forms/GetQuote";
 
 import Carmen from "../../../assets/img/CarmenJimenez.jpg";
 import Shun from "../../../assets/img/ShunWakita.jpg";

@@ -12,6 +12,7 @@ const NavBar = () => {
 	const router = useRouter();
 	const [anchorEls, setAnchorEls] = useState<{ [key: string]: HTMLElement | null }>({});
 	const [drawerOpen, setDrawerOpen] = useState(false);
+
 	const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
 		setAnchorEls({ ...anchorEls, [menu]: event.currentTarget });
 	};
@@ -32,7 +33,10 @@ const NavBar = () => {
 		setDrawerOpen((prev) => !prev);
 	};
 	const handleNavigation = (path: string) => {
-		router.push(path);
+		console.log(path)
+		const validPath = path.startsWith("https") ? path : `/${path}`;
+		
+		router.push(validPath);
 		handlePopoverClose(path);
 	};
 	return (
@@ -62,11 +66,11 @@ const NavBar = () => {
 								onClose={() => handlePopoverClose(menu.title)}
 								anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
 								transformOrigin={{ vertical: "top", horizontal: "left" }}
-								sx={{ mt: 1, minWidth: "20rem", padding: 2 }}
+								sx={{ mt: 1, minWidth: "20rem", padding: 4 }}								
 							>
 								<Grid container wrap="wrap" width={"60vw"}>
 									{menu.items.map(({ item, text, path }, i) => (
-										<Grid item xs={12} sm={6} md={4} key={i} onClick={() => handleNavigation(`/${path}`)}>
+										<Grid item xs={12} sm={6} md={4} key={i} onClick={() => handleNavigation(path)}>
 											<MenuItem sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", width: "20rem" }}>
 												<Typography variant="body2" fontSize={"1.5rem"}>
 													{item}
@@ -87,7 +91,7 @@ const NavBar = () => {
 						</Box>
 					))}
 					<Link href={"/agent-referral-program"}>
-						<Typography color={"#FFF"} fontSize={16} mt={1}>
+						<Typography color={"#FFF"} variant="body2" fontSize={"1rem"} >
 							AGENT REFERRAL PROGRAM
 						</Typography>
 					</Link>
@@ -95,7 +99,7 @@ const NavBar = () => {
 						aria-controls={`menu-${"login"}`}
 						aria-haspopup="true"
 						onClick={(event) => handleMenuOpen(event, "login")}
-						sx={{ color: "#FFF", fontSize: 16, borderColor: "#FFF", mx: 2 }}
+						sx={{ color: "#FFF", fontSize: 14, borderColor: "#FFF", mx: 2, padding:.2 }}
 						variant="outlined"
 					>
 						{"login"}

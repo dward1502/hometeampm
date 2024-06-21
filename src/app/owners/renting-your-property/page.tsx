@@ -5,6 +5,8 @@ import Image from "next/image";
 import Image1 from "../../../assets/img/preparing-to-rent-your-property.jpg";
 import Image2 from "../../../assets/img/setting-the-rent.jpg";
 import Image3 from "../../../assets/img/how-long-will-the-property-be-vacant.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
+import RentalAnalysis from "@/components/UI/RentalAnalysis";
 const page = () => {
 	return (
 		<>
@@ -93,6 +95,8 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
+			<RentalAnalysis/>
+			<GetQuote/>
 		</>
 	);
 };

@@ -7,6 +7,7 @@ import Image2 from "../../../assets/img/financial-reporting.jpg";
 import Image3 from "../../../assets/img/tenant-relation-program.jpg";
 import Image4 from "../../../assets/img/construction-management.jpg";
 import Image5 from "../../../assets/img/brand-management.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	return (
@@ -212,6 +213,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
+			<GetQuote/>
 		</>
 	);
 };

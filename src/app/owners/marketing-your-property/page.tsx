@@ -4,6 +4,7 @@ import SVG1 from "../../../assets/internet.svg";
 import SVG2 from "../../../assets/professional-photography.svg";
 import SVG3 from "../../../assets/showings-and-applications.svg";
 import SVG4 from "../../../assets/signage.svg";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	return (
@@ -89,6 +90,7 @@ const page = () => {
 					</Typography>
 				</Box>
 			</Box>
+			<GetQuote/>
 		</>
 	);
 };

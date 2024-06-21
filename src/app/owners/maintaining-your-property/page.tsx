@@ -5,6 +5,8 @@ import CheckCircle from "../../../assets/check-circle.svg";
 
 import Image1 from "../../../assets/img/best-approach.jpg";
 import Image2 from "../../../assets/img/maintenance-techniques.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
+import RentalAnalysis from "@/components/UI/RentalAnalysis";
 const page = () => {
 	return (
 		<>
@@ -71,6 +73,8 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
+			<RentalAnalysis/>
+			<GetQuote/>
 		</>
 	);
 };

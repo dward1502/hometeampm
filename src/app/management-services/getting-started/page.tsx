@@ -8,6 +8,7 @@ import Image2 from "../../../assets/img/initial-meeting-inspection-and-consultat
 import SVG2 from "../../../assets/icon-maintenance-plan.svg";
 import SVG3 from "../../../assets/icon-tenance-screening-and-lease-preparation.svg";
 import SVG1 from "../../../assets/icon-leasing-oversight.svg";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	return (
@@ -109,6 +110,7 @@ const page = () => {
 					</Typography>
 				</Box>
 			</Box>
+			<GetQuote/>
 		</>
 	);
 };

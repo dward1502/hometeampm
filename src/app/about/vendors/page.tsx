@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import Img from "../../../assets/img/vendor-relation.jpg";
 import CustomButton from "@/components/UI/CustomButton";
 import Link from "next/link";
-
+import Vendor from "../../../components/Forms/Vendor"
 import { vendorpoints1 } from "@/assets/data/data";
 import { vendorpoints2 } from "@/assets/data/data";
 
@@ -92,6 +92,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Grid>
+			<Vendor/>
 		</>
 	);
 };

@@ -6,6 +6,7 @@ import Image1 from "../../assets/img/how-our-referral-program-works.jpg";
 import SVG1 from "../../assets/icon-reffer-a-client-to-us.svg";
 import SVG2 from "../../assets/icon-we-contact-the-client.svg";
 import SVG3 from "../../assets/icon-we-pay-you.svg";
+import AgentReferal from "@/components/Forms/AgentReferal";
 
 const page = () => {
 	return (
@@ -87,6 +88,7 @@ const page = () => {
 					</Typography>
 				</Box>
 			</Box>
+			<AgentReferal/>
 		</>
 	);
 };

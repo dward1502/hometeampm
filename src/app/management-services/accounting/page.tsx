@@ -5,6 +5,7 @@ import CheckCircle from "../../../assets/check-circle.svg";
 
 import Image1 from "../../../assets/img/financial-reporting.jpg";
 import Image2 from "../../../assets/img/accounting.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
 const page = () => {
 	return (
 		<>
@@ -88,6 +89,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
+			<GetQuote/>
 		</>
 	);
 };

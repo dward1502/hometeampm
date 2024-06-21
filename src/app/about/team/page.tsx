@@ -9,6 +9,7 @@ import Carolina from "../../../assets/img/CarolinaGusman.jpg";
 import Jerome from "../../../assets/img/JeromeWatson.jpg";
 import Placeholder from "../../../assets/employee-placeholder.svg";
 import Testimonials from "@/components/UI/Testimonials";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	
@@ -96,6 +97,7 @@ const page = () => {
 				</Grid>
 			</Grid>
 			<Testimonials />
+			<GetQuote/>
 		</>
 	);
 };

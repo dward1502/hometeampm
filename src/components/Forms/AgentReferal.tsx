@@ -1,35 +1,19 @@
+"use client";
 import React from "react";
-import {
-	Box,
-	Typography,
-	List,
-	ListItem,
-	ListItemIcon,
-	ListItemText,
-	TextField,
-	MenuItem,
-	Checkbox,
-	FormControlLabel,
-	Button,
-	Grid,
-	FormControl,
-	InputLabel,
-} from "@mui/material";
+import { Box, Typography, List, ListItem, ListItemIcon, ListItemText, TextField, Grid } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 
 import styles from "../../styles/style.module.css";
 import { styled } from "@mui/system";
 import Checkcircle from "../../assets/check-circle.svg";
-import CustomButton from "./CustomButton";
+import CustomButton from "../UI/CustomButton";
 
 interface FormValues {
 	firstName: string;
 	lastName: string;
 	email: string;
 	phoneNumber: string;
-	interest: string;
-	message: string;
-	terms: boolean;
+	company: string;
 }
 
 const RedStar = styled("span")({
@@ -42,21 +26,18 @@ const StyledTextField = styled(TextField)({
 	},
 });
 
-const GetQuote = () => {
+const AgentReferal = () => {
 	const {
 		handleSubmit,
 		control,
 		formState: { errors },
-		watch,
 	} = useForm<FormValues>({
 		defaultValues: {
 			firstName: "",
 			lastName: "",
 			email: "",
 			phoneNumber: "",
-			interest: "",
-			message: "",
-			terms: false,
+			company: "",
 		},
 	});
 
@@ -69,10 +50,10 @@ const GetQuote = () => {
 				<Grid item xs={12} md={6}>
 					<Box>
 						<Typography variant="body2" color={"#FFF"}>
-							GET A QUOTE
+							STARTING A PARTNERSHIP
 						</Typography>
 						<Typography variant="body1" color={"#FFF"} mt={2} mb={5}>
-							Ready to learn more about how we can serve you? Fill in the information on the form to the right, and we'll get back to you right away.
+							Earn a one-time $250 payment per referral that signs up with Hometeam property management{" "}
 						</Typography>
 						<List>
 							<ListItem>
@@ -81,7 +62,7 @@ const GetQuote = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										The success of your property and your investment is our priority!
+										Keep your clients.
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -91,7 +72,7 @@ const GetQuote = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										The success of your property and your investment is our priority!
+										Help sellers generate revenue when homes don't sell quickly.
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -101,7 +82,7 @@ const GetQuote = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										The success of your property and your investment is our priority!
+										Build better relationships with real estate investors when you connect them with San Diego's best property managers.
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -111,7 +92,7 @@ const GetQuote = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										The success of your property and your investment is our priority!
+										Earn a referral bonus for every client that utilizes our property management services.
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -120,8 +101,8 @@ const GetQuote = () => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<Box component="form" onSubmit={handleSubmit(onSubmit)} noValidate>
-						<Box display="flex" flexDirection="column" gap={2}>
-							<Box display="flex" gap={2}>
+						<Box display="flex" flexDirection="column" gap={4}>
+							<Box display="flex" gap={4}>
 								<Controller
 									name="firstName"
 									control={control}
@@ -132,7 +113,7 @@ const GetQuote = () => {
 											variant="outlined"
 											label={
 												<Typography>
-													First Name<RedStar>*</RedStar>
+													Referring Agent First Name<RedStar>*</RedStar>
 												</Typography>
 											}
 											error={!!errors.firstName}
@@ -151,7 +132,7 @@ const GetQuote = () => {
 											variant="outlined"
 											label={
 												<Typography>
-													Last Name<RedStar>*</RedStar>
+													Referring Agent Last Name<RedStar>*</RedStar>
 												</Typography>
 											}
 											error={!!errors.lastName}
@@ -161,7 +142,44 @@ const GetQuote = () => {
 									)}
 								/>
 							</Box>
-							<Box display="flex" gap={2}>
+							<Controller
+								name="company"
+								control={control}
+								rules={{ required: true }}
+								render={({ field }) => (
+									<StyledTextField
+										{...field}
+										variant="outlined"
+										label={
+											<Typography>
+												Referring Agent Last Name<RedStar>*</RedStar>
+											</Typography>
+										}
+										error={!!errors.company}
+										helperText={errors.company ? "Company name is required" : ""}
+										fullWidth
+									/>
+								)}
+							/>
+							<Box display="flex" gap={4}>
+								<Controller
+									name="phoneNumber"
+									control={control}
+									render={({ field }) => (
+										<StyledTextField
+											{...field}
+											variant="outlined"
+											label={
+												<Typography>
+													Referring Agent Phone Number<RedStar>*</RedStar>
+												</Typography>
+											}
+											error={!!errors.phoneNumber}
+											helperText={errors.phoneNumber ? "Phone number is required" : ""}
+											fullWidth
+										/>
+									)}
+								/>
 								<Controller
 									name="email"
 									control={control}
@@ -172,7 +190,7 @@ const GetQuote = () => {
 											variant="outlined"
 											label={
 												<Typography>
-													Email<RedStar>*</RedStar>
+													Referring Agent Email<RedStar>*</RedStar>
 												</Typography>
 											}
 											error={!!errors.email}
@@ -181,74 +199,8 @@ const GetQuote = () => {
 										/>
 									)}
 								/>
-								<Controller
-									name="phoneNumber"
-									control={control}
-									render={({ field }) => (
-										<StyledTextField
-											{...field}
-											variant="outlined"
-											label="Phone Number"
-											error={!!errors.phoneNumber}
-											helperText={errors.phoneNumber ? "Phone number is required" : ""}
-											fullWidth
-										/>
-									)}
-								/>
 							</Box>
-							<Controller
-								name="interest"
-								control={control}
-								rules={{ required: true }}
-								render={({ field }) => (
-									<StyledTextField
-										{...field}
-										select
-										variant="outlined"
-										label={
-											<Typography>
-												Interested in the Following<RedStar>*</RedStar>
-											</Typography>
-										}
-										error={!!errors.interest}
-										helperText={errors.interest ? "Interest is required" : ""}
-										fullWidth
-									>
-										<MenuItem value="Property Management for property">Property Management for property</MenuItem>
-										<MenuItem value="A rental application">A rental application</MenuItem>
-										<MenuItem value="Schedule a showing">Schedule a showing</MenuItem>
-									</StyledTextField>
-								)}
-							/>
-							<Controller
-								name="message"
-								control={control}
-								render={({ field }) => <StyledTextField {...field} variant="outlined" label="Message" multiline rows={4} fullWidth />}
-							/>
-							<Controller
-								name="terms"
-								control={control}
-								rules={{ required: true }}
-								render={({ field }) => (
-									<FormControlLabel
-										control={<Checkbox {...field} color="secondary" />}
-										label={
-											<Typography color={"#FFF"} fontSize={'1.1rem'}>
-												By providing HomeTeam with your telephone number, you agree to recieve calls and text messages from HomeTeam. HomeTeam may use
-												automated phone dialing systems, automated text and/or electronic mail messaging systems. You may opt out at any time.
-												<RedStar>*</RedStar>
-											</Typography>
-										}
-									/>
-								)}
-							/>
-							<Typography fontSize={"1rem"} color={"#FFF"} my={2}>
-								*Message and data rates may apply. Reply HELP for help. Reply STOP to unsubscribe from SMS messages. Up to 5 messages per month. View
-								Privacy Policy.
-							</Typography>
-							<CustomButton type="submit" disabled={!watch("terms")}>
-								Get My Free Quote
-							</CustomButton>
+							<CustomButton type="submit">Submit</CustomButton>
 						</Box>
 					</Box>
 				</Grid>
@@ -257,4 +209,4 @@ const GetQuote = () => {
 	);
 };
 
-export default GetQuote;
+export default AgentReferal;

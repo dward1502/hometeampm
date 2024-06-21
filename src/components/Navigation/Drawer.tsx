@@ -51,25 +51,24 @@ const NavDrawer = ({ open, toggleDrawer }: DrawerProps) => {
 	};
 	return (
 		<Drawer open={open} anchor="top" onClose={toggleDrawer}>
-				{menuItems.map((menu, k) => (
-					<Accordion expanded={expanded === `${menu.title}`} onChange={handleChange(`${menu.title}`)}>
-						<AccordionSummary aria-controls={`${menu.title}-content`} id={`${menu.title}header`} key={k}>
-							<Typography variant="body2" fontSize={"1.8rem"} color={"#FFF"}>
-								{menu.title}
-							</Typography>
-						</AccordionSummary>
-						{menu.items.map(({ item, path }, i) => (
-							<AccordionDetails>
-								<Link href={`/${path}`} onClick={()=> toggleDrawer()}>
-									<Typography variant="body1" color={"#FFF"} ml={5}>
-										{item}
-									</Typography>
-								</Link>
-							</AccordionDetails>
-						))}
-					</Accordion>
-				))}
-			
+			{menuItems.map((menu, k) => (
+				<Accordion key={k} expanded={expanded === `${menu.title}`} onChange={handleChange(`${menu.title}`)}>
+					<AccordionSummary aria-controls={`${menu.title}-content`} id={`${menu.title}header`}>
+						<Typography variant="body2" fontSize={"1.8rem"} color={"#FFF"}>
+							{menu.title}
+						</Typography>
+					</AccordionSummary>
+					{menu.items.map(({ item, path }, i) => (
+						<AccordionDetails key={i}>
+							<Link href={`/${path}`} onClick={() => toggleDrawer()}>
+								<Typography variant="body1" color={"#FFF"} ml={5}>
+									{item}
+								</Typography>
+							</Link>
+						</AccordionDetails>
+					))}
+				</Accordion>
+			))}
 		</Drawer>
 	);
 };

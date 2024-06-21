@@ -8,6 +8,7 @@ import Image1 from "../../../assets/img/local-realtors-1.jpg";
 import SVG3 from "../../../assets/for-rent-signs.svg";
 import SVG2 from "../../../assets/lockboxes.svg";
 import SVG1 from "../../../assets/rental-hotsheet.svg";
+import GetQuote from "@/components/Forms/GetQuote";
 const page = () => {
 	return (
 		<>
@@ -122,6 +123,7 @@ const page = () => {
 					</Typography>
 				</Box>
 			</Box>
+			<GetQuote/>
 		</>
 	);
 };

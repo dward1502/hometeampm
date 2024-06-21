@@ -7,6 +7,7 @@ import CustomCardComponent from "@/components/UI/CustomCard";
 import { useRouter } from "next/navigation";
 import Testimonials from "@/components/UI/Testimonials";
 import Img from "../../../assets/img/why-choose-us.jpg";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	const router = useRouter();
@@ -98,6 +99,7 @@ const page = () => {
 					</CustomButton>
 				</Box>
 				<Testimonials />
+				<GetQuote/>
 			</Grid>
 		</>
 	);
