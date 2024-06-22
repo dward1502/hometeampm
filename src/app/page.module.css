@@ -3,13 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 .hero {
   width: 100%;
-  min-height: 40rem;
-  background-image: url();
+  height: 60rem;
+  background-image: url("../assets/img/homepage-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

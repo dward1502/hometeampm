@@ -1,9 +1,12 @@
-import React from 'react'
-
+import Hero from "@/components/Hero";
+import Connect from '../../../components/Forms/Connect'
 const page = () => {
-  return (
-    <div>page</div>
-  )
-}
+	return (
+		<>
+			<Hero title={"Connect with us"} />
+			<Connect/>
+		</>
+	);
+};
 
-export default page
+export default page;

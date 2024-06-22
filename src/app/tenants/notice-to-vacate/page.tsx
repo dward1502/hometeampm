@@ -1,8 +1,11 @@
-import React from 'react'
-
+import Hero from "@/components/Hero";
+import NoticeToVacate from "@/components/Forms/NoticeToVacate";
 const page = () => {
   return (
-    <div>page</div>
+    <>
+    <Hero title={'Notice to Vacate'} />
+    <NoticeToVacate/>
+    </>
   )
 }
 

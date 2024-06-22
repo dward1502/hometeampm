@@ -1,12 +1,17 @@
 "use client";
 import { useState } from "react";
-import { AppBar, Toolbar, Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+import { AppBar, Toolbar, Box, Button, Menu, MenuItem, Popover, IconButton, Typography, Grid } from "@mui/material";
 import Link from "next/link";
-import { HomeTeamLogoWhite } from "../SVG/svg";
+import MenuIcon from "@mui/icons-material/Menu";
+import { menuItems } from "@/assets/data/data";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
+import Logo from "../../assets/homeTeamLogo.svg";
+import NavDrawer from "./Drawer";
+import { useRouter } from "next/navigation";
 const NavBar = () => {
+	const router = useRouter();
 	const [anchorEls, setAnchorEls] = useState<{ [key: string]: HTMLElement | null }>({});
+	const [drawerOpen, setDrawerOpen] = useState(false);
 
 	const handleMenuOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
 		setAnchorEls({ ...anchorEls, [menu]: event.currentTarget });
@@ -16,167 +21,112 @@ const NavBar = () => {
 		setAnchorEls({ ...anchorEls, [menu]: null });
 	};
 
-	const menuItems = [
-		{
-			title: "About",
-			items: [
-				{ item: "Our Company", text: "It's been over 20 years and our goal hasn't changed", path: "about/company" },
-				{ item: "Our Team", text: "Meet the Home Team Property Management Team", path: "about/team" },
-				{ item: "Why Choose Us", text: "No matter your property management goals, we will get you there", path: "about/why-choose-us" },
-				{
-					item: "Careers",
-					text: "Take a look at our open positions and feel free to submit an application if your experience is a match",
-					path: "about/careers",
-				},
-				{
-					item: "Vendors",
-					text: "We are continually seeking out qualified, professional vendors to fulfill goods or maintenance contracts",
-					path: "about/vendors",
-				},
-				{
-					item: "Connect With Us",
-					text: "Reach out to our expert team to ssee how we can assist you with your property management needs",
-					path: "about/connect",
-				},
-				{ item: "Testimonials", text: "Read HomeTeam Property Management client testimonials here", path: "about/testimonials" },
-			],
-		},
-		{
-			title: "Management Services",
-			items: [
-				{ item: "Residential", text: "It's been over 20 years and our goal hasn't changed", path: "management-services/residential" },
-				{ item: "Commerical", text: "View our commercial property management services", path: "management-services/commercial" },
-				{ item: "Marketing", text: "View how we market your property to prospective tenants", path: "management-services/marketing" },
-				{
-					item: "Accounting",
-					text: "We specialize in complete financial services for our property owners",
-					path: "management-services/accounting",
-				},
-				{
-					item: "Maintenance",
-					text: "Property maintenance is one of the most important aspects of maximizing your investment",
-					path: "management-services/maintenance",
-				},
-				{
-					item: "Leasing",
-					text: "Our leasing department utilizes the latest in application and credit screening procedures",
-					path: "management-services/leasing",
-				},
-				{ item: "Free Rental Analysis", text: "Get a free rental valuation of your investment property", path: "management-services/free-rental-analysis" },
-				{ item: "Get a Quote", text: "Learn how much it would cost to manage your property", path: "management-services/quote" },
-			],
-		},
-		{
-			title: "Owners",
-			items: [
-				{
-					item: "Marketing your property",
-					text: "Learn how we market your property to ensure the maximum exposure to qualified buyers",
-					path: "owners/marketing-your-property",
-				},
-				{
-					item: "Renting your property",
-					text: "We provide you with guidance on how to ready your property to compete in the ever changing rental market",
-					path: "owners/renting-your-property",
-				},
-				{
-					item: "Maintaining your property",
-					text: "The best approach to maintenance is preventative maintenance, and this is HomeTeam Property Management policy",
-					path: "owners/maintaining-your-property",
-				},
-				{
-					item: "No - Eviction Guarantee",
-					text: "We are so confident in our tenant selection process that we include a No - Eviction Guarantee",
-					path: "owners/no-eviction-guarantee",
-				},
-				{
-					item: "Free rental analysis",
-					text: "Get a free rental valuation of your investment property",
-					path: "owners/free-rental-analysis",
-				},
-				{
-					item: "Owner portal login",
-					text: "Sign-in to monitor your account",
-					path: "owners/owner-portal-login",
-				},
-				{ item: "Get a quote", text: "Learn how much it would cost to manage your property", path: "owners/testimonials" },
-			],
-		},
-		{
-			title: "Tenants",
-			items: [
-				{
-					item: "Rental Search",
-					text: "Find your next place to live in San Diego",
-					path: "tenants/rental-search",
-				},
-				{
-					item: "Tenant Portal Login",
-					text: "Sign-in to monitor your account",
-					path: "tenants/tenant-portal-login",
-				},
-				{
-					item: "Pay Your Rent",
-					text: "Paying rent on time has never been easier",
-					path: "tenants/pay-your-rent",
-				},
-				{
-					item: "Future Tenants",
-					text: "Important information for tenants wanting to lease a property from HomeTeam",
-					path: "tenants/future-tenants",
-				},
-				{
-					item: "Move Out",
-					text: "We want your move-out to be a pleasant and successful one",
-					path: "tenants/move-out",
-				},
-				{
-					item: "Notice to Vacate",
-					text: "Moving out? Submit your notice to vacate here!",
-					path: "tenants/notice-to-vacate",
-				},
-			],
-		},
-		{
-			title: "Properties",
-			items: [
-				{
-					item: "Residential",
-					text: "Find your next place to live in San Diego",
-					path: "properties",
-				},
-				{
-					item: "Commerical",
-					text: "Find your next space to do business in San Diego",
-					path: "properties",
-				},
-			],
-		},
-		{
-			title: "Learning Center",
-			items: [
-				{
-					item: "Free Resources",
-					text: "Access valuable resources and information at no cost",
-					path: "learning-center",
-				},
-				{
-					item: "Blog",
-					text: "Stay informed with our insightful articles and updates",
-					path: "learning-center/blog",
-				},
-			],
-		},
-	];
+	const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>, menu: string) => {
+		setAnchorEls({ ...anchorEls, [menu]: event.currentTarget });
+	};
+
+	const handlePopoverClose = (menu: string) => {
+		setAnchorEls({ ...anchorEls, [menu]: null });
+	};
+
+	const toggleDrawer = () => {
+		setDrawerOpen((prev) => !prev);
+	};
+	const handleNavigation = (path: string) => {
+		console.log(path)
+		const validPath = path.startsWith("https") ? path : `/${path}`;
+		
+		router.push(validPath);
+		handlePopoverClose(path);
+	};
 	return (
-		<AppBar sx={{ padding: 2 }}>
-			<Toolbar>
-				<Box flexGrow={1}>
-					<Link href="/">
-						<HomeTeamLogoWhite />
+		<AppBar position="fixed" sx={{ padding: 2, boxShadow: "none" }} color="transparent">
+			<Toolbar sx={{ justifyContent: "space-between" }}>
+				<Box width={240} height={80} position={"relative"}>
+					<Link href="/" passHref>
+						<Logo />
 					</Link>
 				</Box>
-				<Box display={"flex"} justifyContent={"flex-end"} alignItems={"center"}>
+				<Box sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", alignItems: "center", flexGrow: 1 }}>
+					{menuItems.map((menu, index) => (
+						<Box key={index} onMouseEnter={(event) => handlePopoverOpen(event, menu.title)} onMouseLeave={() => handlePopoverClose(menu.title)}>
+							<Button
+								aria-haspopup="true"
+								endIcon={<ArrowDropDownIcon />}
+								sx={{ color: "#FFF", fontSize: 16, mx: 1 }}
+								onClick={() => handleNavigation(`/${menu.path}`)}
+							>
+								{menu.title}
+							</Button>
+
+							<Popover
+								id={`popover-${menu.title}`}
+								anchorEl={anchorEls[menu.title]}
+								open={Boolean(anchorEls[menu.title])}
+								onClose={() => handlePopoverClose(menu.title)}
+								anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+								transformOrigin={{ vertical: "top", horizontal: "left" }}
+								sx={{ mt: 1, minWidth: "20rem", padding: 4 }}								
+							>
+								<Grid container wrap="wrap" width={"60vw"}>
+									{menu.items.map(({ item, text, path }, i) => (
+										<Grid item xs={12} sm={6} md={4} key={i} onClick={() => handleNavigation(path)}>
+											<MenuItem sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", width: "20rem" }}>
+												<Typography variant="body2" fontSize={"1.5rem"}>
+													{item}
+												</Typography>
+												<Typography
+													variant="subtitle2"
+													fontSize={".8rem"}
+													color="textSecondary"
+													sx={{ whiteSpace: "normal", wordBreak: "break-word" }}
+												>
+													{text}
+												</Typography>
+											</MenuItem>
+										</Grid>
+									))}
+								</Grid>
+							</Popover>
+						</Box>
+					))}
+					<Link href={"/agent-referral-program"}>
+						<Typography color={"#FFF"} variant="body2" fontSize={"1rem"} >
+							AGENT REFERRAL PROGRAM
+						</Typography>
+					</Link>
+					<Button
+						aria-controls={`menu-${"login"}`}
+						aria-haspopup="true"
+						onClick={(event) => handleMenuOpen(event, "login")}
+						sx={{ color: "#FFF", fontSize: 14, borderColor: "#FFF", mx: 2, padding:.2 }}
+						variant="outlined"
+					>
+						{"login"}
+					</Button>
+					<Menu
+						id={`menu-${"login"}`}
+						anchorEl={anchorEls["login"]}
+						keepMounted
+						open={Boolean(anchorEls["login"])}
+						onClose={() => handleMenuClose("login")}
+					>
+						<MenuItem onClick={() => handleMenuClose("login")}>
+							<Link href={`https://hometeam.appfolio.com/connect/users/sign_in`} passHref>
+								<Typography variant="subtitle1">Tenant Login</Typography>
+							</Link>
+						</MenuItem>
+						<MenuItem onClick={() => handleMenuClose("login")}>
+							<Link href={`https://hometeam.appfolio.com/oportal/users/log_in`} passHref>
+								<Typography variant="subtitle1">Owner Login</Typography>
+							</Link>
+						</MenuItem>
+					</Menu>
+				</Box>
+				<IconButton sx={{ display: { xs: "flex", md: "none" } }} onClick={toggleDrawer} color="inherit">
+					<MenuIcon sx={{ color: "#FFF", backgroundColor: "#053149", fontSize: 40, borderRadius: "5px" }} />
+				</IconButton>
+				{/* <Box display={"flex"} justifyContent={"flex-end"} alignItems={"center"}>
 					{menuItems.map((menu, index) => (
 						<Box key={index}>
 							<Button
@@ -184,7 +134,7 @@ const NavBar = () => {
 								aria-haspopup="true"
 								onClick={(event) => handleMenuOpen(event, menu.title)}
 								endIcon={<ArrowDropDownIcon />}
-								sx={{ color: "#FFF", fontSize: 15 }}
+								sx={{ color: "#FFF", fontSize: 16, mx: 1 }}
 							>
 								{menu.title}
 							</Button>
@@ -206,7 +156,9 @@ const NavBar = () => {
 						</Box>
 					))}
 					<Link href={"/agent-referral-program"}>
-						<Typography>AGENT REFERRAL PROGRAM</Typography>
+						<Typography color={"#FFF"} fontSize={16} mt={1}>
+							AGENT REFERRAL PROGRAM
+						</Typography>
 					</Link>
 
 					<Button
@@ -226,7 +178,7 @@ const NavBar = () => {
 						onClose={() => handleMenuClose("login")}
 					>
 						<MenuItem onClick={() => handleMenuClose("login")}>
-							<Link href={`https://hometeam.appfolio.com/connect/users/sign_in`}  passHref>
+							<Link href={`https://hometeam.appfolio.com/connect/users/sign_in`} passHref>
 								<Typography variant="subtitle1">Tenant Login</Typography>
 							</Link>
 						</MenuItem>
@@ -236,8 +188,9 @@ const NavBar = () => {
 							</Link>
 						</MenuItem>
 					</Menu>
-				</Box>
+				</Box> */}
 			</Toolbar>
+			<NavDrawer open={drawerOpen} toggleDrawer={toggleDrawer} />
 		</AppBar>
 	);
 };
