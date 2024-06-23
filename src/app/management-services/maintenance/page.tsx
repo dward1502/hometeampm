@@ -6,7 +6,7 @@ import Image1 from "../../../assets/img/vendor-selection.jpg";
 import Image2 from '../../../assets/img/responsiveness.jpg'
 import CustomButton from "@/components/UI/CustomButton";
 import { useRouter } from "next/navigation";
-import GetQuote from "@/components/UI/GetQuote";
+import GetQuote from "@/components/Forms/GetQuote";
 
 const page = () => {
 	const router = useRouter();
