@@ -1,7 +1,40 @@
+export const homeItems = [
+	{
+		title: "RESIDENTIAL",
+		text: "We deliver the highest level of professionalism in the residential property management industry to give property owners peace of mind.",
+		path: "/management-services/residential",
+	},
+	{
+		title: "COMMERCIAL",
+		text: "We understand the requirements to manage commercial properties successfully. Our custom management plans are designed to meet your needs.",
+		path: "/management-services/commercial",
+	},
+	{
+		title: "MARKETING",
+		text: "We get word out to find the best tenants for your property using professional photography, videos, referrals, top rental sites, and more.",
+		path: "/management-services/marketing",
+	},
+	{
+		title: "ACCOUNTING",
+		text: "From bill payment to rent collection and preparing tax reporting statements, we offer complete financial services for property owners.",
+		path: "/management-services/accounting",
+	},
+	{
+		title: "MAINTENANCE",
+		text: "Property maintenance is one of the most critical aspects of maximizing your investment, and it's one of our top priorities when managing properties.",
+		path: "/management-services/maintenance",
+	},
+	{
+		title: "LEASING",
+		text: "Our full-time leasing agents apply the lastest marketing, application processing and screening procedures to place high-quality tenants in every property.",
+		path: "/management-services/leasing",
+	},
+];
+
 export const menuItems = [
 	{
 		title: "About",
-		path:"/about",
+		path: "/about",
 		items: [
 			{ item: "Our Company", text: "It's been over 20 years and our goal hasn't changed", path: "about/company" },
 			{ item: "Our Team", text: "Meet the Home Team Property Management Team", path: "about/team" },
@@ -26,7 +59,7 @@ export const menuItems = [
 	},
 	{
 		title: "Management Services",
-		path:"management-services",
+		path: "management-services",
 		items: [
 			{ item: "Residential", text: "It's been over 20 years and our goal hasn't changed", path: "management-services/residential" },
 			{ item: "Commerical", text: "View our commercial property management services", path: "management-services/commercial" },
@@ -55,7 +88,8 @@ export const menuItems = [
 		],
 	},
 	{
-		title: "Owners",path:"/owners",
+		title: "Owners",
+		path: "/owners",
 		items: [
 			{
 				item: "Marketing your property",
@@ -91,7 +125,8 @@ export const menuItems = [
 		],
 	},
 	{
-		title: "Tenants",path:"/tenants",
+		title: "Tenants",
+		path: "/tenants",
 		items: [
 			{
 				item: "Rental Search",

@@ -1,3 +1,4 @@
+"use client"
 import { styled } from "@mui/system";
 import Button from "@mui/material/Button";
 const CustomButton = styled(Button)(({ theme }) => ({
