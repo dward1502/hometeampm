@@ -7,6 +7,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import CustomButton from "../UI/CustomButton";
 import { Dayjs } from "dayjs";
+import { showToast } from "@/lib/toasthelper";
 
 interface FormValues {
 	firstName: string;
@@ -32,9 +33,8 @@ const StyledTextField = styled(TextField)({
 const NoticeToVacate = () => {
 	const {
 		handleSubmit,
-		control,
+		control,reset,
 		formState: { errors },
-		watch,
 	} = useForm<FormValues>({
 		defaultValues: {
 			firstName: "",
@@ -49,8 +49,27 @@ const NoticeToVacate = () => {
 		},
 	});
 
-	const onSubmit = (data: FormValues) => {
-		console.log(data);
+	const onSubmit = async (data: FormValues) => {
+		try {
+			const res = await fetch("/api/quote", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+			if (res.ok) {
+				showToast("success", "Form submitted successfully!");
+				reset();
+			} else {
+				const result = await res.json();
+				showToast("error", "Error submitting form");
+				console.error("Error submitting form", result);
+			}
+		} catch (error) {
+			showToast("error", "Error submitting form");
+			console.error("Error submitting form", error);
+		}
 	};
 	return (
 		<Grid container spacing={2} my={5}>

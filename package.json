@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.600.0",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -18,11 +19,14 @@
     "@mui/x-date-pickers": "^7.7.0",
     "@svgr/webpack": "^8.1.0",
     "dayjs": "^1.11.11",
+    "dotenv": "^16.4.5",
     "next": "14.2.3",
     "next-plugin-svgr": "^1.1.10",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
+    "react-toastify": "^10.0.5",
     "sharp": "^0.33.4"
   },
   "devDependencies": {

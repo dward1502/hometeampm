@@ -5,6 +5,7 @@ import { Controller, useForm } from "react-hook-form";
 
 import { styled } from "@mui/system";
 import CustomButton from "../UI/CustomButton";
+import { showToast } from "@/lib/toasthelper";
 
 interface FormValues {
 	firstName: string;
@@ -32,7 +33,7 @@ const GetQuote = () => {
 		handleSubmit,
 		control,
 		formState: { errors },
-		watch,
+		watch,reset,
 	} = useForm<FormValues>({
 		defaultValues: {
 			firstName: "",
@@ -46,8 +47,27 @@ const GetQuote = () => {
 		},
 	});
 
-	const onSubmit = (data: FormValues) => {
-		console.log(data);
+	const onSubmit = async (data: FormValues) => {
+		try {
+			const res = await fetch("/api/quote", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+			if (res.ok) {
+				showToast("success", "Form submitted successfully!");
+				reset();
+			} else {
+				const result = await res.json();
+				showToast("error", "Error submitting form");
+				console.error("Error submitting form", result);
+			}
+		} catch (error) {
+			showToast("error", "Error submitting form");
+			console.error("Error submitting form", error);
+		}
 	};
 	return (
 		<Grid container spacing={2} sx={{ padding: { xs: 2, md: "6rem" } }} display={"flex"}>

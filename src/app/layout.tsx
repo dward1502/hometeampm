@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../styles/theme";
 import NavBar from "@/components/Navigation/NavBar";
 import Footer from "@/components/Footer";
+import ToastProvider from "@/lib/ToastContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -85,7 +86,7 @@ export default function RootLayout({
 				<AppRouterCacheProvider>
 					<ThemeProvider theme={theme}>
 						<NavBar />
-						{children}
+						<ToastProvider>{children}</ToastProvider>
 						<Footer />
 					</ThemeProvider>
 				</AppRouterCacheProvider>

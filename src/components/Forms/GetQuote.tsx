@@ -1,24 +1,13 @@
-"use client"
+"use client";
 import React from "react";
-import {
-	Box,
-	Typography,
-	List,
-	ListItem,
-	ListItemIcon,
-	ListItemText,
-	TextField,
-	MenuItem,
-	Checkbox,
-	FormControlLabel,
-	Grid,
-} from "@mui/material";
+import { Box, Typography, List, ListItem, ListItemIcon, ListItemText, TextField, MenuItem, Checkbox, FormControlLabel, Grid } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 
 import styles from "../../styles/style.module.css";
 import { styled } from "@mui/system";
 import Checkcircle from "../../assets/check-circle.svg";
 import CustomButton from "../UI/CustomButton";
+import { showToast } from "@/lib/toasthelper";
 
 interface FormValues {
 	firstName: string;
@@ -46,6 +35,7 @@ const GetQuote = () => {
 		control,
 		formState: { errors },
 		watch,
+		reset,
 	} = useForm<FormValues>({
 		defaultValues: {
 			firstName: "",
@@ -58,8 +48,27 @@ const GetQuote = () => {
 		},
 	});
 
-	const onSubmit = (data: FormValues) => {
-		console.log(data);
+	const onSubmit = async (data: FormValues) => {
+		try {
+			const res = await fetch("/api/quote", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+			if (res.ok) {
+				showToast("success", "Form submitted successfully!");
+				reset();
+			} else {
+				const result = await res.json();
+				showToast("error", "Error submitting form");
+				console.error("Error submitting form", result);
+			}
+		} catch (error) {
+			showToast("error", "Error submitting form");
+			console.error("Error submitting form", error);
+		}
 	};
 	return (
 		<div className={styles.quote}>
@@ -231,7 +240,7 @@ const GetQuote = () => {
 									<FormControlLabel
 										control={<Checkbox {...field} color="secondary" />}
 										label={
-											<Typography color={"#FFF"} fontSize={'1.1rem'}>
+											<Typography color={"#FFF"} fontSize={"1.1rem"}>
 												By providing HomeTeam with your telephone number, you agree to recieve calls and text messages from HomeTeam. HomeTeam may use
 												automated phone dialing systems, automated text and/or electronic mail messaging systems. You may opt out at any time.
 												<RedStar>*</RedStar>
