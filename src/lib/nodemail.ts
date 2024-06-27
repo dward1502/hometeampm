@@ -5,7 +5,7 @@ export const transportEmail = nodemailer.createTransport({
 	port: 465,
 	secure: true,
 	auth: {
-		user: "hometeampmemail@gmail.com",
-		pass: "msdstaoyxsspvapl",
+		user: process.env.NODEMAIL_EMAIL,
+		pass: process.env.NODEMAIL_PASSWORD,
 	},
 });

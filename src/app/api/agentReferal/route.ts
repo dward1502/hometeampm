@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
 		await transportEmail.sendMail({
 			from: "hometeampmemail@gmail.com",
 			to: "dward1502@gmail.com",
-			subject: "Requesting Quote",
+			subject: "Agent Referal",
 			html: emailHTML,
 		});
 		return NextResponse.json(responseData);

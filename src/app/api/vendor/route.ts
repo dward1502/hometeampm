@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { transportEmail } from "@/lib/nodemail";
-
+import multer from "multer";
+import { IncomingMessage } from "http";
 interface FormValues {
 	firstName: string;
 	lastName: string;
@@ -33,10 +34,25 @@ function generateHTML(data: FormValues) {
 		<p><strong>Service Area:</strong> ${data.serviceArea}</p>
     <p><strong>Info:</strong> ${data.info}</p>`;
 }
+const multerMiddleware = multer().single("resume");
+function runMiddleware(req: IncomingMessage, res: any, fn: any) {
+	return new Promise((resolve, reject) => {
+		fn(req, res, (result: any) => {
+			if (result instanceof Error) {
+				return reject(result);
+			}
+			return resolve(result);
+		});
+	});
+}
 
 export async function POST(request: NextRequest) {
 	try {
+		const req = request as any;
+
 		const data: FormValues = await request.json();
+		await runMiddleware(req, {}, multerMiddleware);
+
 		const responseData = {
 			message: "Form Submitted successfuly",
 		};
@@ -45,8 +61,9 @@ export async function POST(request: NextRequest) {
 		await transportEmail.sendMail({
 			from: "hometeampmemail@gmail.com",
 			to: "dward1502@gmail.com",
-			subject: "Requesting Quote",
+			subject: "Vendor Application",
 			html: emailHTML,
+			attachments,
 		});
 		return NextResponse.json(responseData);
 	} catch (err) {
