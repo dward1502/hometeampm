@@ -14,7 +14,7 @@ interface FormValues {
 	lastName: string;
 	email: string;
 	phoneNumber: string;
-	resume: FileList;
+	resume: File;
 	message: string;
 }
 
@@ -50,12 +50,14 @@ const GetQuote = () => {
 			email: "",
 			phoneNumber: "",
 			message: "",
+			resume:undefined
 		},
 	});
 
 	const onSubmit = async (data: FormValues) => {
+		console.log(data)
 		try {
-			const res = await fetch("/api/quote", {
+			const res = await fetch("/api/career", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

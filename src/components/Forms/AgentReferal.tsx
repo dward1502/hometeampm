@@ -44,7 +44,7 @@ const AgentReferal = () => {
 
 	const onSubmit = async (data: FormValues) => {
 		try {
-			const res = await fetch("/api/quote", {
+			const res = await fetch("/api/agentReferal", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

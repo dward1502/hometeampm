@@ -51,7 +51,7 @@ const NoticeToVacate = () => {
 
 	const onSubmit = async (data: FormValues) => {
 		try {
-			const res = await fetch("/api/quote", {
+			const res = await fetch("/api/vacateNotice", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

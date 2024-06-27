@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { transportEmail } from "@/lib/nodemail";
 
 interface FormValues {
 	firstName: string;
@@ -8,14 +9,30 @@ interface FormValues {
 	company: string;
 }
 
+function generateHTML(data: FormValues) {
+	return `<h1>Quote Request</h1>
+    <p><strong>First Name:</strong> ${data.firstName}</p>
+    <p><strong>Last Name:</strong> ${data.lastName}</p>
+    <p><strong>Email:</strong> ${data.email}</p>
+    <p><strong>Phone Number:</strong> ${data.phoneNumber || "N/A"}</p>
+    <p><strong>Company:</strong> ${data.company}</p>
+    `;
+}
+
 export async function POST(request: NextRequest) {
 	try {
 		const data: FormValues = await request.json();
 		const responseData = {
 			message: "Form Submitted successfuly",
-			data: data,
 		};
-		console.log(responseData);
+
+		const emailHTML = generateHTML(data);
+		await transportEmail.sendMail({
+			from: "hometeampmemail@gmail.com",
+			to: "dward1502@gmail.com",
+			subject: "Requesting Quote",
+			html: emailHTML,
+		});
 		return NextResponse.json(responseData);
 	} catch (err) {
 		console.error("Error processing request", err);
