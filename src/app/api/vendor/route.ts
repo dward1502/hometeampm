@@ -15,9 +15,9 @@ interface FormValues {
 	trade: string;
 	serviceArea: string;
 	info: string;
-	w9form: FileList;
-	workersComp: File;
-	insurance: File;
+	w9form: Express.MulterFile;
+	workersComp: Express.MulterFile;
+	insurance: Express.MulterFile;
 	selectedOptions: { [key: string]: boolean };
 }
 
@@ -34,7 +34,11 @@ function generateHTML(data: FormValues) {
 		<p><strong>Service Area:</strong> ${data.serviceArea}</p>
     <p><strong>Info:</strong> ${data.info}</p>`;
 }
-const multerMiddleware = multer().single("resume");
+const multerMiddleware = multer().fields([
+	{ name: "w9form", maxCount: 1 },
+	{ name: "workersComp", maxCount: 1 },
+	{ name: "insurance", maxCount: 1 },
+]);
 function runMiddleware(req: IncomingMessage, res: any, fn: any) {
 	return new Promise((resolve, reject) => {
 		fn(req, res, (result: any) => {
@@ -58,6 +62,12 @@ export async function POST(request: NextRequest) {
 		};
 
 		const emailHTML = generateHTML(data);
+		const attachments = [
+			data.w9form && { filename: data.w9form.originalname, content: data.w9form.buffer },
+			data.workersComp && { filename: data.workersComp.originalname, content: data.workersComp.buffer },
+			data.insurance && { filename: data.insurance.originalname, content: data.insurance.buffer },
+		].filter(Boolean);
+
 		await transportEmail.sendMail({
 			from: "hometeampmemail@gmail.com",
 			to: "dward1502@gmail.com",
