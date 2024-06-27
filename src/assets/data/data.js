@@ -175,21 +175,21 @@ export const menuItems = [
 			},
 		],
 	},
-	// {
-	// 	title: "Learning Center",
-	// 	items: [
-	// 		{
-	// 			item: "Free Resources",
-	// 			text: "Access valuable resources and information at no cost",
-	// 			path: "learning-center",
-	// 		},
-	// 		{
-	// 			item: "Blog",
-	// 			text: "Stay informed with our insightful articles and updates",
-	// 			path: "learning-center/blog",
-	// 		},
-	// 	],
-	// },
+	{
+		title: "Learning Center",
+		items: [
+			{
+				item: "Free Resources",
+				text: "Access valuable resources and information at no cost",
+				path: "learning-center",
+			},
+			{
+				item: "Blog",
+				text: "Stay informed with our insightful articles and updates",
+				path: "learning-center/blog",
+			},
+		],
+	},
 ];
 
 export const vendorpoints1 = [

@@ -7,13 +7,14 @@ import styles from "../../styles/style.module.css";
 import { styled } from "@mui/system";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import CustomButton from "../UI/CustomButton";
+import { showToast } from "@/lib/toasthelper";
 
 interface FormValues {
 	firstName: string;
 	lastName: string;
 	email: string;
 	phoneNumber: string;
-	resume: FileList;
+	resume: File;
 	message: string;
 }
 
@@ -40,7 +41,7 @@ const VisuallyHiddenInput = styled("input")({
 const GetQuote = () => {
 	const {
 		handleSubmit,
-		control,
+		control,reset,
 		formState: { errors },
 	} = useForm<FormValues>({
 		defaultValues: {
@@ -49,11 +50,32 @@ const GetQuote = () => {
 			email: "",
 			phoneNumber: "",
 			message: "",
+			resume:undefined
 		},
 	});
 
-	const onSubmit = (data: FormValues) => {
-		console.log(data);
+	const onSubmit = async (data: FormValues) => {
+		console.log(data)
+		try {
+			const res = await fetch("/api/career", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+			if (res.ok) {
+				showToast("success", "Form submitted successfully!");
+				reset();
+			} else {
+				const result = await res.json();
+				showToast("error", "Error submitting form");
+				console.error("Error submitting form", result);
+			}
+		} catch (error) {
+			showToast("error", "Error submitting form");
+			console.error("Error submitting form", error);
+		}
 	};
 	return (
 		<div className={styles.quote}>
