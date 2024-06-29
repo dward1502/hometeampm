@@ -131,7 +131,7 @@ export const menuItems = [
 			{
 				item: "Rental Search",
 				text: "Find your next place to live in San Diego",
-				path: "tenants/rental-search",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 			{
 				item: "Tenant Portal Login",
@@ -166,12 +166,12 @@ export const menuItems = [
 			{
 				item: "Residential",
 				text: "Find your next place to live in San Diego",
-				path: "properties",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 			{
 				item: "Commerical",
 				text: "Find your next space to do business in San Diego",
-				path: "properties",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 		],
 	},
