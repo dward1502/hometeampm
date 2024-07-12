@@ -13,7 +13,7 @@ import Shun from "../../../assets/img/ShunWakita.jpg";
 import Testimonials from "@/components/UI/Testimonials";
 import SVG from '../../../assets/circleStar.svg'
 
-const page = () => {
+const Page = () => {
 	const router = useRouter();
 	return (
 		<>
@@ -142,7 +142,7 @@ const page = () => {
 					</Typography>
 					<Box paddingX={10}>
 						<Typography variant="body1" mb={5} textAlign={"center"}>
-							Our team members ensure that every client is a priority! Click below to get to know us a bit better. We're all looking forward to
+							Our team members ensure that every client is a priority! Click below to get to know us a bit better. We are all looking forward to
 							working with you!
 						</Typography>
 					</Box>
@@ -190,4 +190,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

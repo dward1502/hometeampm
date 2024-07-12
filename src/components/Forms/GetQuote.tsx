@@ -79,7 +79,7 @@ const GetQuote = () => {
 							GET A QUOTE
 						</Typography>
 						<Typography variant="body1" color={"#FFF"} mt={2} mb={5}>
-							Ready to learn more about how we can serve you? Fill in the information on the form to the right, and we'll get back to you right away.
+							Ready to learn more about how we can serve you? Fill in the information on the form to the right, and we will get back to you right away.
 						</Typography>
 						<List>
 							<ListItem>

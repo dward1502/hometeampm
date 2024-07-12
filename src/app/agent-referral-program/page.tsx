@@ -54,7 +54,7 @@ const page = () => {
 						REFER A CLIENT TO US
 					</Typography>
 					<Typography variant="body1">
-						It's easy to send us a client. Complete the form on this page and we'll review your submission shortly.
+						It is easy to send us a client. Complete the form on this page and we&aposll review your submission shortly.
 					</Typography>
 				</Box>
 				<Box
@@ -69,7 +69,7 @@ const page = () => {
 					<Typography variant="body2" fontSize={"1.3rem"} my={2}>
 						WE CONTACT THE CLIENT
 					</Typography>
-					<Typography variant="body1">We'll get in touch with the customer and help them explore the management solutions available.</Typography>
+					<Typography variant="body1">We will get in touch with the customer and help them explore the management solutions available.</Typography>
 				</Box>
 				<Box
 					sx={{ boxShadow: "0 .3rem 3.2rem #00000029", width: "20rem", height: "18rem", backgroundColor: "#FFF", padding: 4, margin: "1.5rem" }}

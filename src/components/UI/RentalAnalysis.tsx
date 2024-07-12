@@ -21,7 +21,7 @@ const RentalAnalysis = () => {
 							How Much Will My Home Rent For?
 						</Typography>
 						<Typography variant="body1" mt={2}>
-							The success of your investment property means we're doing our jobs well. Part of delivering our top-rated services for your success is
+							The success of your investment property means we are doing our jobs well. Part of delivering our top-rated services for your success is
 							ensuring that your property rents at the most competitive rates. Whether residential or commercial, our experienced leasing team
 							conducts a thorough comparative market analysis to help maximize your investment income.F
 						</Typography>
@@ -30,7 +30,7 @@ const RentalAnalysis = () => {
 								<ListItemIcon>
 									<CheckCircle color="secondary" />
 								</ListItemIcon>
-								<ListItemText>You could be at risk of selling yourself short with a rate that's too low!</ListItemText>
+								<ListItemText>You could be at risk of selling yourself short with a rate that is too low!</ListItemText>
 							</ListItem>
 							<ListItem>
 								<ListItemIcon>

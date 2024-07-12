@@ -9,7 +9,7 @@ import Image3 from "../../../assets/img/tenant-screening.jpg";
 import CustomButton from "@/components/UI/CustomButton";
 import { useRouter } from "next/navigation";
 import GetQuote from "@/components/Forms/GetQuote";
-const page = () => {
+const Page = () => {
 	const router = useRouter();
 	return (
 		<>
@@ -89,4 +89,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

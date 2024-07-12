@@ -10,7 +10,8 @@ import SVG3 from "../../../assets/for-rent-signs.svg";
 import SVG2 from "../../../assets/lockboxes.svg";
 import SVG1 from "../../../assets/rental-hotsheet.svg";
 import GetQuote from "@/components/Forms/GetQuote";
-const page = () => {
+
+const Page = () => {
 	const router = useRouter();
 	return (
 		<>
@@ -135,4 +136,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
