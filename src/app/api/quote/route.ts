@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 		const emailHTML = generateHTML(data);
 		await transportEmail.sendMail({
 			from: "hometeampmemail@gmail.com",
-			to: "dward1502@gmail.com",
+			to: "info@hometeampm.com",
 			subject: "Requesting Quote",
 			html: emailHTML,
 		});

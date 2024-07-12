@@ -48,7 +48,7 @@ const page = () => {
 					</Box>
 				</Grid>
 
-				<Grid container spacing={2} sx={{ backgroundColor: "#F2F4F6", padding: 8 }} mt={10}>
+				<Grid container spacing={2} sx={{ backgroundColor: "#F2F4F6", padding: {xs:3, md:8} }} mt={10}>
 					<Grid item xs={12} md={6}>
 						<Box display={"flex"} sx={{ flexDirection: { xs: "column", md: "row" } }}>
 							<Typography variant="body2" fontWeight={"bold"} color={"#053149"}>

@@ -62,11 +62,12 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.hero}>
-				<Typography variant="h2" textAlign={"center"} color={"#FFF"}>
+				<Typography variant="h2" textAlign={"center"} color={"#FFF"} fontSize={'4rem'}>
 					Rental Property Management Company in San Diego
 				</Typography>
 			</div>
-			<Box
+			
+			{/* <Box
 				display={"flex"}
 				width={"100vw"}
 				height={200}
@@ -87,9 +88,9 @@ export default function Home() {
 					<input></input>
 					<CustomButton>Get Started</CustomButton>
 				</Box>
-			</Box>
+			</Box> */}
 			<Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDirection={"column"}>
-				<Grid container spacing={2} padding={8}>
+				<Grid container spacing={2} sx={{padding:{xs:2,md:8}}}>
 					<Grid item xs={12} md={4}>
 						<Box
 							display={"flex"}
@@ -97,8 +98,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG1 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -117,8 +119,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG2 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -138,8 +141,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG3 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -159,8 +163,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG4 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -179,8 +184,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG5 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -200,8 +206,9 @@ export default function Home() {
 							alignItems={"center"}
 							flexDirection={"column"}
 							sx={{ backgroundColor: "#ebebeb" }}
-							padding={3}
+							padding={5}
 							gap={3}
+							height={425}
 						>
 							<SVG5 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -215,7 +222,7 @@ export default function Home() {
 						</Box>
 					</Grid>
 				</Grid>
-				<CustomButton>LEARN ABOUT MORE OF OUR SERVICES</CustomButton>
+				<CustomButton sx={{my:8, width:300}}>LEARN ABOUT MORE OF OUR SERVICES</CustomButton>
 			</Box>
 			<Box
 				display={"flex"}
@@ -274,8 +281,7 @@ export default function Home() {
 				</Grid>
 			</Box>
 			<Box
-				sx={{ backgroundColor: "#F2F4F6" }}
-				padding={6}
+				sx={{ backgroundColor: "#F2F4F6",padding:{xs:0,md:8} }}
 				width={"100vw"}
 				display={"flex"}
 				alignItems={"center"}
@@ -285,14 +291,14 @@ export default function Home() {
 				<Typography variant="body2" color={"#053149"} mt={8} mb={3}>
 					Our Values
 				</Typography>
-				<Box paddingX={10}>
+				<Box sx={{padding:{xs:0,md:8}}}>
 					<Typography variant="body1" mb={5} padding={3} textAlign={"center"}>
 						From our founder to every team member and action we take, these core values drive who we are and how we serve property owners in the San
 						Diego area.
 					</Typography>
 				</Box>
 
-				<Grid container spacing={3} justifyContent="center" paddingX={10}>
+				<Grid container spacing={3} justifyContent="center" sx={{padding:{xs:0,md:8}}}>
 					<Grid item xs={12} md={4}>
 						<CustomCardComponent height={425}>
 							<SVG9 />
@@ -332,7 +338,7 @@ export default function Home() {
 						</CustomCardComponent>
 					</Grid>
 				</Grid>
-				<CustomButton>GET STARTED</CustomButton>
+				<CustomButton sx={{my:5}}>GET STARTED</CustomButton>
 			</Box>
 			<Testimonials />
 		</main>

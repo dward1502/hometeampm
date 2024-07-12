@@ -50,27 +50,27 @@ const Footer = () => {
 				</Grid>
 				<Grid item xs={12} md={3} display={"flex"} flexDirection={"column"} justifyContent={"center"}>
 					<Typography variant="body2">NAVIGATION</Typography>
-					<Link href={"/#"}>
+					<Link href={"/about/company"}>
 						<Typography variant="body1" mt={1}>
 							About
 						</Typography>
 					</Link>
-					<Link href={"/#"}>
+					<Link href={"/management-services/residential"}>
 						<Typography variant="body1" mt={1}>
 							Management Services
 						</Typography>
 					</Link>
-					<Link href={"/#"}>
+					<Link href={"/owners/marketing-your-property"}>
 						<Typography variant="body1" mt={1}>
 							Owners
 						</Typography>
 					</Link>
-					<Link href={"/#"}>
+					<Link href={"/tenants/future-tenants"}>
 						<Typography variant="body1" mt={1}>
 							Tenants
 						</Typography>
 					</Link>
-					<Link href={"/#"}>
+					<Link href={"https://app.tenantturner.com/listings/hometeampropertymanagement"}>
 						<Typography variant="body1" mt={1}>
 							Properties
 						</Typography>

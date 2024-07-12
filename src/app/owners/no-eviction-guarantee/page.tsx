@@ -10,7 +10,7 @@ const page = () => {
 	return (
 		<>
 			<Hero title={"No - Eviction Guarantee"} />
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6",padding:{xs:3,md:8} }} width={"100%"}  display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
