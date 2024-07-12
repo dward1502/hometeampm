@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Typography, Box, Grid } from "@mui/material";
 import { Metadata } from "next";
 import CustomCardComponent from "@/components/UI/CustomCard";
+import Link from "next/link";
 
 import SVG1 from "../assets/service-icon-1.svg";
 import SVG2 from "../assets/service-icon-2.svg";
@@ -62,11 +63,11 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<div className={styles.hero}>
-				<Typography variant="h2" textAlign={"center"} color={"#FFF"} fontSize={'4rem'}>
+				<Typography variant="h2" textAlign={"center"} color={"#FFF"} fontSize={"4rem"}>
 					Rental Property Management Company in San Diego
 				</Typography>
 			</div>
-			
+
 			{/* <Box
 				display={"flex"}
 				width={"100vw"}
@@ -90,7 +91,7 @@ export default function Home() {
 				</Box>
 			</Box> */}
 			<Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDirection={"column"}>
-				<Grid container spacing={2} sx={{padding:{xs:2,md:8}}}>
+				<Grid container spacing={2} sx={{ padding: { xs: 2, md: 8 } }}>
 					<Grid item xs={12} md={4}>
 						<Box
 							display={"flex"}
@@ -100,7 +101,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG1 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -109,7 +110,9 @@ export default function Home() {
 							<Typography variant="body1" color={"secondary"}>
 								We deliver the highest level of professionalism in the residential property management industry to give property owners peace of mind.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/residential">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={4}>
@@ -121,7 +124,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG2 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -131,7 +134,9 @@ export default function Home() {
 								We understand the requirements to manage commercial properties successfully. Our custom management plans are designed to meet your
 								needs.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/commercial">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={4}>
@@ -143,7 +148,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG3 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -153,7 +158,9 @@ export default function Home() {
 								We get word out to find the best tenants for your property using professional photography, videos, referrals, top rental sites, and
 								more.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/marketing">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={4}>
@@ -165,7 +172,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG4 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -174,7 +181,9 @@ export default function Home() {
 							<Typography variant="body1" fontSize={"1rem"} color={"secondary"}>
 								From bill payment to rent collection and preparing tax reporting statements, we offer complete financial services for property owners.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/accounting">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={4}>
@@ -186,7 +195,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG5 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -196,7 +205,9 @@ export default function Home() {
 								Property maintenance is one of the most critical aspects of maximizing your investment, and it's one of our top priorities when
 								managing properties.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/maintenance">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={4}>
@@ -208,7 +219,7 @@ export default function Home() {
 							sx={{ backgroundColor: "#ebebeb" }}
 							padding={5}
 							gap={3}
-							height={425}
+							height={450}
 						>
 							<SVG5 />
 							<Typography variant="body2" fontSize={"1.8rem"}>
@@ -218,11 +229,13 @@ export default function Home() {
 								Our full-time leasing agents apply the lastest marketing, application processing and screening procedures to place high-quality
 								tenants in every property.
 							</Typography>
-							<Typography>Learn More</Typography>
+							<CustomButton>
+								<Link href="/management-services/leasing">Learn More</Link>
+							</CustomButton>
 						</Box>
 					</Grid>
 				</Grid>
-				<CustomButton sx={{my:8, width:300}}>LEARN ABOUT MORE OF OUR SERVICES</CustomButton>
+				<CustomButton sx={{ my: 8, width: 300 }}>LEARN ABOUT MORE OF OUR SERVICES</CustomButton>
 			</Box>
 			<Box
 				display={"flex"}
@@ -281,7 +294,7 @@ export default function Home() {
 				</Grid>
 			</Box>
 			<Box
-				sx={{ backgroundColor: "#F2F4F6",padding:{xs:0,md:8} }}
+				sx={{ backgroundColor: "#F2F4F6", padding: { xs: 0, md: 8 } }}
 				width={"100vw"}
 				display={"flex"}
 				alignItems={"center"}
@@ -291,14 +304,14 @@ export default function Home() {
 				<Typography variant="body2" color={"#053149"} mt={8} mb={3}>
 					Our Values
 				</Typography>
-				<Box sx={{padding:{xs:0,md:8}}}>
+				<Box sx={{ padding: { xs: 0, md: 8 } }}>
 					<Typography variant="body1" mb={5} padding={3} textAlign={"center"}>
 						From our founder to every team member and action we take, these core values drive who we are and how we serve property owners in the San
 						Diego area.
 					</Typography>
 				</Box>
 
-				<Grid container spacing={3} justifyContent="center" sx={{padding:{xs:0,md:8}}}>
+				<Grid container spacing={3} justifyContent="center" sx={{ padding: { xs: 0, md: 8 } }}>
 					<Grid item xs={12} md={4}>
 						<CustomCardComponent height={425}>
 							<SVG9 />
@@ -338,7 +351,7 @@ export default function Home() {
 						</CustomCardComponent>
 					</Grid>
 				</Grid>
-				<CustomButton sx={{my:5}}>GET STARTED</CustomButton>
+				<CustomButton sx={{ my: 5 }}>GET STARTED</CustomButton>
 			</Box>
 			<Testimonials />
 		</main>
