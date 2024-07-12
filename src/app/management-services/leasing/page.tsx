@@ -21,7 +21,7 @@ const page = () => {
 				</Typography>
 			</Box>
 
-			<Box width={"100%"} padding={10} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:10}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
@@ -35,13 +35,13 @@ const page = () => {
 							new ways of marketing our rental units. Whether through video, print or social marketing, our company provides the maximum exposure of
 							your property to the tenants that are looking for a property to rent. See some of our marketing methods in the marketing section.
 						</Typography>
-						<CustomButton onClick={() => router.push("/about/connect")} sx={{ mt: 6, width:450 }}>
+						<CustomButton onClick={() => router.push("/about/connect")} sx={{ mt: 6, width:350 }}>
 							LEARN MORE ABOUT MARKETING SERVICES
 						</CustomButton>
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={10} display={"flex"} sx={{ backgroundColor: "#F2F4F6" }}>
+			<Box width={"100%"} display={"flex"} sx={{ backgroundColor: "#F2F4F6", padding:{xs:3,md:10} }}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
 						<Typography variant="body2"  my={2}>
@@ -63,7 +63,7 @@ const page = () => {
 				</Grid>
 			</Box>
 
-			<Box width={"100%"} padding={10} display={"flex"}>
+			<Box width={"100%"}sx={{padding:{xs:3,md:10}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>

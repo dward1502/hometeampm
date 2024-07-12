@@ -20,7 +20,7 @@ const page = () => {
 				</Typography>
 			</Box>
 
-			<Box width={"100%"} padding={10} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:10}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
@@ -36,7 +36,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={10} display={"flex"} sx={{ backgroundColor: "#F2F4F6" }}>
+			<Box width={"100%"} display={"flex"} sx={{ backgroundColor: "#F2F4F6", padding:{xs:3,md:10} }}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
 						<Typography variant="body2" my={2}>
@@ -55,9 +55,9 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={10} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:10}}}  display={"flex"}>
 				<Grid container spacing={2}>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={10}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} sx={{padding:{xs:3,md:10}}} >
 						<Typography variant="body2" my={2}>
 							TENANT ACCESS
 						</Typography>

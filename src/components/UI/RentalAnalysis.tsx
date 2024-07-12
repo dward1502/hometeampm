@@ -9,14 +9,14 @@ import SVG3 from "../../assets/icon-optimize-rental-value.svg";
 const RentalAnalysis = () => {
 	return (
 		<>
-			<Box width={"100%"} padding={8} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:8}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
 							<Image src={Image1} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
 						</Box>
 					</Grid>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} sx={{ paddingLeft: "4rem !important" }}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} sx={{ paddingLeft: "3rem !important" }}>
 						<Typography variant="body2" my={2}>
 							How Much Will My Home Rent For?
 						</Typography>

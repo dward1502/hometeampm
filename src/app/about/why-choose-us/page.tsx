@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import Testimonials from "@/components/UI/Testimonials";
 import Img from "../../../assets/img/why-choose-us.jpg";
 import GetQuote from "@/components/Forms/GetQuote";
+import SVG from '../../../assets/circleStar.svg'
 
 const page = () => {
 	const router = useRouter();
@@ -58,22 +59,24 @@ const page = () => {
 				>
 					<Grid container spacing={3} justifyContent="center" alignContent={'center'} padding={5}>
 						<Grid item xs={12} md={4}>
-							<CustomCardComponent height={375}>
+							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									CONTINUED GROWTH
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									We encourage growth not just within our company but encourage it with all the parties we serve. Whether it is consistent staff
 									training, webinars for our customers, or just a place that allows for the sharing of ideas.
 								</Typography>
 							</CustomCardComponent>
 						</Grid>
 						<Grid  item xs={12} md={4}>
-							<CustomCardComponent height={375}>
+							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									INTEGRITY WITHOUT COMPROMISE
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									Our company was founded on the belief that our word should be as good as the contracts that we write. That is why we were one of the
 									first management companies to guarantee our services and why HomeTeam continues to provide a transparent and open environment for
 									its staff and clients.
@@ -81,11 +84,12 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid  item xs={12} md={4}>
-							<CustomCardComponent height={375}>
+							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									DELIVERING EXCELLENCE
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									Good is never good enough. We are always working on trying to build an excellent experience for our customers and are always looking
 									for ways to make it better. We want to be able to delight our customers and provide them with a stress-free experience. Whether it
 									be a homeowner or a tenant moving into one of our properties for the first time, each and every interaction is important to us.

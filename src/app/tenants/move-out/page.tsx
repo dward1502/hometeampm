@@ -7,7 +7,7 @@ const page = () => {
 	return (
 		<>
 			<Hero title={"Move Out"} />
-			<Box padding={5} sx={{paddingX:{xs:0,md:25}}} display={'flex'} flexDirection={'column'} justifyContent={'center'}>
+			<Box padding={5} sx={{paddingX:{xs:3,md:25}}} display={'flex'} flexDirection={'column'} justifyContent={'center'}>
 				<Typography variant="body1" my={5}>
 					When moving out, you must provide an advance 30 day written notice to vacate. A 30 day notice form is provided in the forms section. Once we
 					receive your 30 day notice to vacate, the following list is a breakdown of what you will need to do prior to your departure.

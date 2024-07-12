@@ -4,16 +4,18 @@ import { Typography, Box, Grid } from "@mui/material";
 import Image from "next/image";
 import CustomButton from "@/components/UI/CustomButton";
 import Image1 from "../../../assets/img/local-realtors-1.jpg";
+import { useRouter } from "next/navigation";
 
 import SVG3 from "../../../assets/for-rent-signs.svg";
 import SVG2 from "../../../assets/lockboxes.svg";
 import SVG1 from "../../../assets/rental-hotsheet.svg";
 import GetQuote from "@/components/Forms/GetQuote";
 const page = () => {
+	const router = useRouter();
 	return (
 		<>
 			<Hero title={"Marketing Services"} />
-			<Box display={"flex"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} padding={8}>
+			<Box display={"flex"} flexDirection={"column"} justifyContent={"center"} alignItems={"center"} sx={{ padding: { xs: 3, md: 8 } }}>
 				<Typography variant="body1" textAlign={"center"} mb={2}>
 					Your property will be advertised in the most comprehensive and proven ways the rental market offers. Below are just some of the ways in
 					which we market your property to prospective tenants.
@@ -24,9 +26,14 @@ const page = () => {
 					the rental online in a secure, convenient method. Our website includes other valuable assistance for our clients and residents including
 					information on maintenance requests, payments, local area links and frequently asked questions.
 				</Typography>
-				<CustomButton sx={{ marginTop: 3, width: 275 }}>VIEW RENTAL LISTINGS</CustomButton>
+				<CustomButton
+					sx={{ marginTop: 3, width: 275 }}
+					onClick={() => router.push("https://app.tenantturner.com/listings/hometeampropertymanagement")}
+				>
+					VIEW RENTAL LISTINGS
+				</CustomButton>
 			</Box>
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6", padding: { xs: 3, md: 8 } }} width={"100%"} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
@@ -34,7 +41,7 @@ const page = () => {
 						</Box>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="body2"  my={2}>
+						<Typography variant="body2" my={2}>
 							LOCAL REALTORS
 						</Typography>
 						<Typography variant="body1">
@@ -51,10 +58,10 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={8} display={"flex"}>
+			<Box width={"100%"} sx={{ padding: { xs: 3, md: 8 } }} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="body2"  my={2}>
+						<Typography variant="body2" my={2}>
 							YOUTUBE
 						</Typography>
 						<Typography variant="body1">
@@ -64,7 +71,7 @@ const page = () => {
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
-						<Typography variant="body2"  my={2}>
+						<Typography variant="body2" my={2}>
 							PROFESSIONAL PHOTOGRAPHY
 						</Typography>
 						<Typography variant="body1">
@@ -75,7 +82,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box display={"flex"} flexWrap={"wrap"} padding={5} sx={{ backgroundColor: "#F2F4F6" }}>
+			<Box display={"flex"} flexWrap={"wrap"} sx={{ backgroundColor: "#F2F4F6", padding: { xs: 3, md: 5 } }}>
 				<Box
 					display={"flex"}
 					flexDirection={"column"}
@@ -123,7 +130,7 @@ const page = () => {
 					</Typography>
 				</Box>
 			</Box>
-			<GetQuote/>
+			<GetQuote />
 		</>
 	);
 };

@@ -71,14 +71,14 @@ const page = () => {
 					<Typography variant="body2" color={"#053149"} my={3}>
 						Our Values
 					</Typography>
-					<Box paddingX={10}>
-						<Typography variant="body1" mb={5} padding={3} textAlign={"center"}>
+					<Box sx={{paddingX:{mobile:2, tablet:10}}}>
+						<Typography variant="body1" mb={5} textAlign={"center"}>
 							From our founder to every team member and action we take, these core values drive who we are and how we serve property owners in the San
 							Diego area.
 						</Typography>
 					</Box>
 
-					<Grid container spacing={3} justifyContent="center" paddingX={10}>
+					<Grid container spacing={3} justifyContent="center" alignContent={'center'} sx={{paddingX:{mobile:2, tablet:10}}}>
 						<Grid item xs={12} md={4}>
 							
 							<CustomCardComponent height={425}>
@@ -86,7 +86,7 @@ const page = () => {
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									CONTINUED GROWTH
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									We encourage growth not just within our company but encourage it with all the parties we serve. Whether it is consistent staff
 									training, webinars for our customers, or just a place that allows for the sharing of ideas.
 								</Typography>
@@ -99,7 +99,7 @@ const page = () => {
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									INTEGRITY WITHOUT COMPROMISE
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									Our company was founded on the belief that our word should be as good as the contracts that we write. That is why we were one of the
 									first management companies to guarantee our services and why HomeTeam continues to provide a transparent and open environment for
 									its staff and clients.
@@ -113,7 +113,7 @@ const page = () => {
 								<Typography variant="body2" color={"#053149"} my={2} sx={{ fontSize: "1.6rem" }}>
 									DELIVERING EXCELLENCE
 								</Typography>
-								<Typography variant="body1">
+								<Typography variant="body1" fontSize={'1rem'}>
 									Good is never good enough. We are always working on trying to build an excellent experience for our customers and are always looking
 									for ways to make it better. We want to be able to delight our customers and provide them with a stress-free experience. Whether it
 									be a homeowner or a tenant moving into one of our properties for the first time, each and every interaction is important to us.

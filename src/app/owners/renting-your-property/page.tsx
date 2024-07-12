@@ -12,14 +12,14 @@ const page = () => {
 		<>
 			<Hero title={"Renting Your Property"} />
 
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6",padding:{xs:3,md:8} }} width={"100%"} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
 							<Image src={Image1} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
 						</Box>
 					</Grid>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={4}>
 						<Typography typography={"body2"}>
 							PREPARING TO RENT YOUR PROPERTY
 						</Typography>
@@ -32,9 +32,9 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={8} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:6}}} display={"flex"}>
 				<Grid container spacing={2}>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={4}>
 						<Typography typography={"body2"}>
 							SETTING THE RENT
 						</Typography>
@@ -52,14 +52,14 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6" ,padding:{xs:3,md:8}}} width={"100%"} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
 							<Image src={Image3} alt="Career opportunites image" style={{ maxWidth: "100%", height: "auto" }} />
 						</Box>
 					</Grid>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={4}>
 						<Typography typography={"body2"}>
 							HOW LONG WILL THE PROPERTY BE VACANT?
 						</Typography>
@@ -75,9 +75,9 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={8} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:6}}} display={"flex"}>
 				<Grid container spacing={2}>
-					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
+					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"} paddingX={4}>
 						<Typography typography={"body2"}>
 							HOW DOES TENANT SCREENING BENEFIT ME?
 						</Typography>

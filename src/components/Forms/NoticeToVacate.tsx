@@ -74,7 +74,7 @@ const NoticeToVacate = () => {
 	return (
 		<Grid container spacing={2} my={5}>
 			<Grid item xs={12} md={6} display={"flex"} flexDirection={"column"} alignItems={"center"}>
-				<Box display={"flex"} flexDirection={"column"} alignItems={"center"} width={"35rem"}>
+				<Box display={"flex"} flexDirection={"column"} alignItems={"center"} sx={{padding:{xs:3,md:6}}}>
 					<Typography variant="body2" my={2}>
 						SUBMIT YOUR 30-DAY NOTICE TO VACATE
 					</Typography>

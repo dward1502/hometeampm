@@ -43,7 +43,7 @@ const page = () => {
 					</ListItem>
 				</List>
 			</Box>
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={10} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6",padding:{xs:2,md:10} }} width={"100%"}  display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
@@ -84,7 +84,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={10} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:4,md:10}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} flexDirection={"column"} justifyContent={"center"}>
 						<Typography variant="body2">

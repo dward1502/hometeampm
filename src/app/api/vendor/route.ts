@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
 
 		await transportEmail.sendMail({
 			from: "hometeampmemail@gmail.com",
-			to: "dward1502@gmail.com",
+			to: "info@hometeampm.com",
 			subject: "Vendor Application",
 			html: emailHTML,
 			attachments,

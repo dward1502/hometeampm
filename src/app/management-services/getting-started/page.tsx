@@ -14,7 +14,7 @@ const page = () => {
 	return (
 		<>
 			<Hero title="Get a Quote" />
-			<Box sx={{ backgroundColor: "#F2F4F6" }} width={"100%"} padding={8} display={"flex"}>
+			<Box sx={{ backgroundColor: "#F2F4F6", padding:{xs:3,md:8} }} width={"100%"} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"}>
 						<Box width={"100%"} position={"relative"} display={"flex"} justifyContent={"center"} alignContent={"center"}>
@@ -36,7 +36,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box width={"100%"} padding={8} display={"flex"}>
+			<Box width={"100%"} sx={{padding:{xs:3,md:8}}} display={"flex"}>
 				<Grid container spacing={2}>
 					<Grid item xs={12} md={6} display={"flex"} justifyContent={"center"} flexDirection={"column"}>
 						<Typography typography={"h4"} fontWeight={"bold"} color={"#053149"}>
@@ -56,7 +56,7 @@ const page = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			<Box display={"flex"} flexWrap={"wrap"} padding={5} sx={{ backgroundColor: "#F2F4F6" }}>
+			<Box display={"flex"} flexWrap={"wrap"} sx={{ backgroundColor: "#F2F4F6", padding:{xs:3,md:5} }}>
 				<Box
 					display={"flex"}
 					flexDirection={"column"}

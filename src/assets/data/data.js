@@ -51,7 +51,7 @@ export const menuItems = [
 			},
 			{
 				item: "Connect With Us",
-				text: "Reach out to our expert team to ssee how we can assist you with your property management needs",
+				text: "Reach out to our expert team to see how we can assist you with your property management needs",
 				path: "about/connect",
 			},
 			{ item: "Testimonials", text: "Read HomeTeam Property Management client testimonials here", path: "about/testimonials" },
@@ -131,7 +131,7 @@ export const menuItems = [
 			{
 				item: "Rental Search",
 				text: "Find your next place to live in San Diego",
-				path: "tenants/rental-search",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 			{
 				item: "Tenant Portal Login",
@@ -166,12 +166,12 @@ export const menuItems = [
 			{
 				item: "Residential",
 				text: "Find your next place to live in San Diego",
-				path: "properties",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 			{
 				item: "Commerical",
 				text: "Find your next space to do business in San Diego",
-				path: "properties",
+				path: "https://app.tenantturner.com/listings/hometeampropertymanagement",
 			},
 		],
 	},
