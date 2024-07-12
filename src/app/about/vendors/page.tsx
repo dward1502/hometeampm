@@ -12,7 +12,7 @@ import Vendor from "../../../components/Forms/Vendor"
 import { vendorpoints1 } from "@/assets/data/data";
 import { vendorpoints2 } from "@/assets/data/data";
 
-const page = () => {
+const Page = () => {
 	const router = useRouter();
 	return (
 		<>
@@ -97,4 +97,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

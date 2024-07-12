@@ -202,7 +202,7 @@ export default function Home() {
 								MAINTENANCE
 							</Typography>
 							<Typography variant="body1" fontSize={"1rem"} color={"secondary"}>
-								Property maintenance is one of the most critical aspects of maximizing your investment, and it's one of our top priorities when
+								Property maintenance is one of the most critical aspects of maximizing your investment, and it is one of our top priorities when
 								managing properties.
 							</Typography>
 							<CustomButton>
@@ -253,7 +253,7 @@ export default function Home() {
 								HOMETEAM BY THE NUMBERS
 							</Typography>
 							<Typography variant="body1" color={"#FFF"}>
-								Our tenure in the San Diego market and dedicated team members have generated some impressive numbers since 1992. While we don't mean
+								Our tenure in the San Diego market and dedicated team members have generated some impressive numbers since 1992. While we do not mean
 								to brag, our numbers represent the best property management experience in the market!
 							</Typography>
 						</Box>

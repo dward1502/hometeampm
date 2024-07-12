@@ -92,7 +92,7 @@ const AgentReferal = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										Help sellers generate revenue when homes don't sell quickly.
+										Help sellers generate revenue when homes do not sell quickly.
 									</Typography>
 								</ListItemText>
 							</ListItem>
@@ -102,7 +102,7 @@ const AgentReferal = () => {
 								</ListItemIcon>
 								<ListItemText>
 									<Typography variant="body1" color={"#FFF"}>
-										Build better relationships with real estate investors when you connect them with San Diego's best property managers.
+										Build better relationships with real estate investors when you connect them with San Diego&aposs best property managers.
 									</Typography>
 								</ListItemText>
 							</ListItem>

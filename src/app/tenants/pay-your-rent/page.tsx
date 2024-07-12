@@ -5,7 +5,7 @@ import ArrRight from "../../../assets/arrow-right.svg";
 import CustomButton from "@/components/UI/CustomButton";
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
 	const router = useRouter();
 
 	return (
@@ -82,4 +82,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;

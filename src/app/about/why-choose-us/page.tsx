@@ -10,7 +10,7 @@ import Img from "../../../assets/img/why-choose-us.jpg";
 import GetQuote from "@/components/Forms/GetQuote";
 import SVG from '../../../assets/circleStar.svg'
 
-const page = () => {
+const Page = () => {
 	const router = useRouter();
 
 	return (
@@ -32,7 +32,7 @@ const page = () => {
 							Residential and Commercial property owners benefit from our top-rated services!
 						</Typography>
 						<Typography variant="body1" my={1.5}>
-							San Diego is an extensive area. It's also a popular spot for residential and commercial real estate investors! We realize we're not the
+							San Diego is an extensive area. It is also a popular spot for residential and commercial real estate investors! We realize we are not the
 							only property managers in town—but our longevity in the community for more than 20 years and highly-rated services make us the best
 							choice for property owners looking to maximize their investments.
 						</Typography>
@@ -59,7 +59,7 @@ const page = () => {
 				>
 					<Grid container spacing={3} justifyContent="center" alignContent={'center'} padding={5}>
 						<Grid item xs={12} md={4}>
-							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+							<CustomCardComponent height={425}>
 								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									CONTINUED GROWTH
@@ -71,7 +71,7 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid  item xs={12} md={4}>
-							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+							<CustomCardComponent height={425}>
 								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									INTEGRITY WITHOUT COMPROMISE
@@ -84,7 +84,7 @@ const page = () => {
 							</CustomCardComponent>
 						</Grid>
 						<Grid  item xs={12} md={4}>
-							<CustomCardComponent sx={{height:{mobile:450, tab:400}}}>
+							<CustomCardComponent height={425}>
 								<SVG/>
 								<Typography variant="h6" color={"#053149"} my={2}>
 									DELIVERING EXCELLENCE
@@ -109,4 +109,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
